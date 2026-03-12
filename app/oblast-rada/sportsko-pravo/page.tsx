@@ -15,54 +15,48 @@ export default function SportskoPravoPage() {
         en: "Practice Area",
       }}
       description={{
-        sr: "Zastupanje sportista, klubova i sportskih organizacija u ugovornim, disciplinskim i arbitražnim postupcima.",
+        sr: "Pružamo pravnu pomoć i zastupanje u svim pitanjima iz oblasti sportskog prava.",
         en: "Representation of athletes, clubs, and sports organizations in contractual, disciplinary, and arbitration matters.",
       }}
       icon={<Trophy className="h-8 w-8" />}
       content={{
         sr: (
           <>
-            <h2>Pravna podrška u sportskom sistemu</h2>
+            <h2>Sportsko pravo</h2>
             <p>
-              Sportski odnosi imaju kratke rokove i specifična pravila. Pružamo pravnu podršku sportistima, klubovima i menadžerima uz razumevanje domaćih i međunarodnih sportskih propisa.
+              Sportsko pravo predstavlja specifičnu i dinamičnu oblast prava koja obuhvata pravne odnose nastale u vezi sa sportskim aktivnostima, sportskim organizacijama i učesnicima u sportu.
+            </p>
+            <p>
+              Profesionalni i amaterski sport podrazumevaju brojna ugovorna, disciplinska i statusna pitanja, zbog čega je stručno pravno savetovanje ključno za zaštitu prava sportista, klubova i drugih subjekata u sportu.
             </p>
 
-            <h2>Ugovori u sportu</h2>
+            <h2>Pravna podrška sportistima, klubovima i organizacijama</h2>
+            <p>Zastupamo:</p>
             <ul>
-              <li>profesionalni ugovori sportista i trenera</li>
-              <li>transferi, pozajmice i sporazumni raskidi</li>
-              <li>ugovori o zastupanju i posredovanju</li>
-              <li>sponzorski, marketinški i komercijalni ugovori</li>
+              <li>profesionalne i amaterske sportiste</li>
+              <li>sportske klubove i saveze</li>
+              <li>trenere, sportske radnike i druga lica angažovana u sportu</li>
             </ul>
+            <p>
+              Pravna pomoć obuhvata savetovanje i zastupanje u vezi sa pravima i obavezama koje proizlaze iz sportskih aktivnosti, kao i zaštitu interesa klijenata u sporovima pred nadležnim organima.
+            </p>
 
             <h2>Disciplinski i regulatorni postupci</h2>
             <p>
-              Zastupamo klijente pred disciplinskim organima klubova i saveza, kao i u žalbenim postupcima.
+              Zastupamo klijente u disciplinskim i statusnim postupcima pred sportskim savezima, ligama i drugim nadležnim sportskim organima, uključujući postupke zbog povrede sportskih pravila, disciplinskih prekršaja i sporove u vezi sa registracijom i statusom sportista.
             </p>
-            <ul>
-              <li>povrede disciplinskih pravila</li>
-              <li>sporovi oko registracije i prava nastupa</li>
-              <li>postupci vezani za licence i status sportista</li>
-            </ul>
 
             <h2>Arbitraža i sportski sporovi</h2>
-            <ul>
-              <li>vansudsko rešavanje sporova pred sportskim telima</li>
-              <li>zastupanje u arbitražnim postupcima</li>
-              <li>priprema podnesaka i vođenje pregovora o poravnanju</li>
-            </ul>
-
-            <h2>Podrška sportskim organizacijama</h2>
-            <ul>
-              <li>pravna struktura kluba ili udruženja</li>
-              <li>interna pravila, kodeksi i usklađivanje dokumenata</li>
-              <li>pravna podrška pri organizaciji događaja</li>
-              <li>upravljanje ugovornim i reputacionim rizicima</li>
-            </ul>
-
-            <h2>Pristup kancelarije</h2>
             <p>
-              U sportu su brzina i preciznost ključni. Zato radimo fokusirano, sa jasnom strategijom i praktičnim rešenjima koja štite profesionalni i poslovni interes klijenta.
+              Kancelarija pruža zastupanje u postupcima arbitraže i drugih alternativnih načina rešavanja sporova u sportu, u skladu sa pravilima sportskih saveza i važećim propisima.
+            </p>
+            <p>
+              Posebno iskustvo imamo u postupcima pred sportskim arbitražama i disciplinskim organima.
+            </p>
+
+            <h2>Naš pristup</h2>
+            <p>
+              Svaki predmet iz oblasti sportskog prava sagledavamo kroz prizmu specifičnosti sportskog sistema i interesa klijenata. Cilj našeg rada je pravna sigurnost, efikasna zaštita prava i dugoročna stabilnost sportskih odnosa.
             </p>
           </>
         ),

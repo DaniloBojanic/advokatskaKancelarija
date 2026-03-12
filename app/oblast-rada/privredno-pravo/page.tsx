@@ -15,58 +15,60 @@ export default function PrivrednoPravoPage() {
         en: "Practice Area",
       }}
       description={{
-        sr: "Pravna podrška privrednim društvima i preduzetnicima u svakodnevnom poslovanju, ugovorima i sporovima.",
+        sr: "Sveobuhvatna pravna podrška privrednim društvima i preduzetnicima za zakonito i efikasno poslovanje.",
         en: "Legal support for companies and entrepreneurs in daily operations, contracts, and disputes.",
       }}
       icon={<Building2 className="h-8 w-8" />}
       content={{
         sr: (
           <>
-            <h2>Podrška tokom celog poslovnog ciklusa</h2>
+            <h2>Privredno pravo</h2>
             <p>
-              Savetujemo klijente od osnivanja, preko redovnog poslovanja, do reorganizacije i rešavanja sporova. Cilj je da pravni rizici budu pod kontrolom, a poslovne odluke pravno održive.
+              Privredno pravo obuhvata pravne odnose nastale u poslovanju privrednih subjekata i predstavlja osnov sigurnog i stabilnog poslovnog okruženja.
+            </p>
+            <p>
+              Kancelarija pruža sveobuhvatnu pravnu pomoć pravnim licima i preduzetnicima, sa ciljem zakonitog, sigurnog i efikasnog poslovanja.
             </p>
 
-            <h2>Osnivanje i korporativne promene</h2>
+            <h2>Pravna podrška privrednim subjektima</h2>
+            <p>Pružamo kontinuiranu ili pojedinačnu pravnu podršku:</p>
             <ul>
-              <li>osnivanje društava i registracija kod nadležnih organa</li>
-              <li>izmene osnivačkih akata i korporativnih odluka</li>
-              <li>statusne promene, prenos udela i promene upravljanja</li>
-              <li>interni akti i usklađivanje korporativne dokumentacije</li>
+              <li>privrednim društvima</li>
+              <li>preduzetnicima</li>
+              <li>drugim oblicima organizovanja u skladu sa važećim propisima</li>
+            </ul>
+            <p>
+              Pravna pomoć obuhvata savetovanje u vezi sa svakodnevnim poslovanjem, kao i rešavanje konkretnih pravnih pitanja koja se javljaju tokom rada i razvoja poslovnih subjekata.
+            </p>
+
+            <h2>Osnivanje i statusna pitanja</h2>
+            <p>Pružamo pravnu pomoć u vezi sa:</p>
+            <ul>
+              <li>osnivanjem privrednih društava i preduzetnika</li>
+              <li>izmenama statusnih podataka</li>
+              <li>statusnim promenama (spajanja, pripajanja, podele)</li>
+              <li>prestankom rada i likvidacijom privrednih subjekata</li>
             </ul>
 
             <h2>Privredni ugovori</h2>
             <p>
-              Pripremamo, proveravamo i pregovaramo ugovore koji su ključni za poslovanje, sa jasnim mehanizmima zaštite klijenta.
+              Zastupamo klijente u sastavljanju, pregovaranju, tumačenju i raskidu ugovora. Cilj je prevencija sporova i zaštita interesa klijenata kroz jasno definisane ugovorne odnose.
             </p>
             <ul>
-              <li>ugovori o prodaji robe i pružanju usluga</li>
-              <li>ugovori o saradnji, distribuciji i zastupanju</li>
-              <li>ugovori o poverljivosti, licenci i intelektualnoj svojini</li>
-              <li>instrumenti obezbeđenja potraživanja</li>
+              <li>ugovori o prometu robe i usluga</li>
+              <li>ugovori o poslovnoj saradnji</li>
+              <li>ugovori o zakupu i poslovnim odnosima</li>
+              <li>drugi ugovori iz oblasti privrednog prava</li>
             </ul>
 
             <h2>Naplata i privredni sporovi</h2>
-            <ul>
-              <li>opomene, pregovori i vansudska naplata</li>
-              <li>sastavljanje tužbi i zastupanje pred privrednim sudovima</li>
-              <li>sporovi između članova društva i menadžmenta</li>
-              <li>izvršni postupci i naplata po pravnosnažnim odlukama</li>
-            </ul>
-
-            <h2>Compliance i prevencija rizika</h2>
             <p>
-              Preventivni pristup štedi vreme i troškove. Pomažemo da poslovanje bude usklađeno sa propisima i internim pravilima.
+              Zastupamo klijente u privrednim i parničnim postupcima pred nadležnim sudovima, kao i u postupcima mirnog rešavanja sporova. Posebno se bavimo sporovima koji proističu iz ugovornih odnosa, naplate potraživanja i odgovornosti u poslovanju.
             </p>
-            <ul>
-              <li>pravna revizija ugovora i poslovnih procesa</li>
-              <li>usaglašenost sa regulatornim zahtevima</li>
-              <li>izrada internih politika i procedura</li>
-            </ul>
 
-            <h2>Zašto klijenti biraju ovakav pristup</h2>
+            <h2>Naš pristup</h2>
             <p>
-              Fokus je na praktičnim rešenjima, brzoj reakciji i jasnoj komunikaciji. Klijent unapred zna pravne rizike, opcije i očekivani tok postupka.
+              Svakom klijentu pristupamo individualno, uz detaljnu analizu poslovnog i pravnog konteksta. Naš cilj je pravovremeno prepoznavanje rizika, efikasno rešavanje sporova i dugoročna zaštita poslovnih interesa klijenata.
             </p>
           </>
         ),

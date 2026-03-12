@@ -15,53 +15,50 @@ export default function PrekrsajnoPravoPage() {
         en: "Practice Area",
       }}
       description={{
-        sr: "Pružamo odbranu i pravno savetovanje u prekršajnim postupcima pred nadležnim organima i sudovima.",
+        sr: "Pružamo pravnu pomoć i zastupanje okrivljenih u prekršajnim postupcima pred nadležnim sudovima i organima.",
         en: "We provide defense and legal counsel in misdemeanor proceedings before competent authorities and courts.",
       }}
       icon={<Gavel className="h-8 w-8" />}
       content={{
         sr: (
           <>
-            <h2>U kojim situacijama pomažemo</h2>
+            <h2>Prekršajni postupci i pravna zaštita</h2>
             <p>
-              Zastupamo klijente u postupcima koji mogu imati ozbiljne posledice: novčane kazne, zaštitne mere, kaznene poene i zabrane. Posebno vodimo računa o rokovima, zakonitosti postupanja organa i kvalitetu dokaznog postupka.
+              Prekršajni postupci su među najčešćim postupcima sa kojima se građani i privredni subjekti susreću u praksi. Iako se često smatraju lakšim oblicima povrede propisa, posledice mogu biti značajne i dugotrajne, finansijski i profesionalno.
+            </p>
+            <p>
+              Kancelarija pruža pravnu pomoć i zastupanje u svim vrstama prekršajnih postupaka pred prekršajnim sudovima i drugim nadležnim organima, sa ciljem zaštite prava okrivljenih i postizanja najpovoljnijeg mogućeg ishoda.
             </p>
 
-            <h2>Najčešće vrste prekršaja</h2>
+            <h2>Zastupanje u prekršajnim postupcima</h2>
+            <p>
+              Zastupamo klijente u postupcima koji se vode zbog različitih vrsta prekršaja, naročito u oblastima:
+            </p>
             <ul>
-              <li>saobraćajni prekršaji i mere vezane za vozačku dozvolu</li>
-              <li>prekršaji protiv javnog reda i mira</li>
-              <li>prekršaji iz oblasti privrednog i komunalnog poslovanja</li>
-              <li>inspekcijski, carinski i drugi specifični prekršaji</li>
+              <li>saobraćajnih prekršaja</li>
+              <li>prekršaja iz oblasti javnog reda i mira</li>
+              <li>prekršaja iz oblasti privrede i poslovanja</li>
+              <li>prekršaja propisanih posebnim zakonima i podzakonskim aktima</li>
+            </ul>
+            <p>
+              Pravna pomoć obuhvata savetovanje pre pokretanja postupka, sastavljanje podnesaka, izjavljivanje prigovora i žalbi, kao i zastupanje pred sudom tokom celokupnog postupka.
+            </p>
+
+            <h2>Zašto je važno angažovati advokata</h2>
+            <p>
+              Iako angažovanje advokata nije zakonska obaveza, stručno zastupanje često ima presudan značaj za ishod. Advokat obezbeđuje pravilnu primenu zakona, ukazuje na procesne i materijalnopravne nedostatke i brine o potpunoj zaštiti prava okrivljenog.
+            </p>
+            <p>U prekršajnim postupcima često je moguće:</p>
+            <ul>
+              <li>ostvariti olakšavajuće okolnosti</li>
+              <li>ublažiti ili zameniti izrečenu sankciju</li>
+              <li>sprečiti izricanje zaštitnih mera (npr. zabrana upravljanja vozilom)</li>
+              <li>dovesti do obustave postupka kada za to postoje zakonski uslovi</li>
             </ul>
 
-            <h2>Kako radimo na predmetu</h2>
-            <h3>1. Analiza predmeta</h3>
+            <h2>Sankcije u prekršajnom postupku</h2>
             <p>
-              Pregledamo zapisnike, rešenja, službene beleške i ostalu dokumentaciju. Utvrđujemo da li postoje procesni propusti ili nedostaci u dokazima.
-            </p>
-
-            <h3>2. Strategija odbrane</h3>
-            <p>
-              Pripremamo jasnu i realnu strategiju: osporavanje činjenica, predlaganje dokaza, ukazivanje na olakšavajuće okolnosti i traženje blaže sankcije kada je to opravdano.
-            </p>
-
-            <h3>3. Zastupanje pred sudom</h3>
-            <p>
-              Zastupamo klijenta tokom celog postupka, uključujući glavne pretrese, podnošenje pravnih lekova i praćenje izvršenja odluka.
-            </p>
-
-            <h2>Prava okrivljenog</h2>
-            <ul>
-              <li>pravo na odbranu i branioca</li>
-              <li>pravo da se izjasni o navodima i dokazima</li>
-              <li>pravo da predlaže dokaze u svoju korist</li>
-              <li>pravo na pravni lek protiv odluke</li>
-            </ul>
-
-            <h2>Zašto je stručna odbrana važna</h2>
-            <p>
-              U prekršajnim postupcima i manje greške mogu imati dugoročne posledice. Pravovremena i stručno postavljena odbrana često značajno utiče na krajnji ishod predmeta.
+              Za prekršaje mogu biti izrečene novčane kazne, opomene, zaštitne mere i druge zakonom predviđene sankcije. Pravovremeno i stručno postupanje u velikom broju slučajeva može značajno uticati na visinu kazne ili na njeno potpuno izostavljanje.
             </p>
           </>
         ),

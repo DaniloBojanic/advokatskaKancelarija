@@ -15,72 +15,100 @@ export default function NaknadaStetePage() {
         en: "Practice Area",
       }}
       description={{
-        sr: "Zastupamo fizička i pravna lica u postupcima naknade materijalne i nematerijalne štete, u pregovorima i pred sudom.",
+        sr: "Zastupamo fizička i pravna lica u svim vrstama postupaka naknade štete, pred osiguranjem i sudom.",
         en: "We represent individuals and companies in compensation claims for material and non-material damage, in negotiations and before courts.",
       }}
       icon={<Scale className="h-8 w-8" />}
       content={{
         sr: (
           <>
-            <h2>Kada imate pravo na naknadu štete?</h2>
+            <h2>Naknada štete na vozilu nakon saobraćajne nezgode</h2>
             <p>
-              Pravo na naknadu postoji kada je nastala šteta, kada postoji odgovorno lice i kada se može dokazati uzročna veza između štetnog događaja i posledice. U praksi to najčešće obuhvata saobraćajne nezgode, povrede na radu, odgovornost zbog opasne stvari ili delatnosti, kao i štetu nastalu povredom ugovora.
+              U najvećem broju saobraćajnih nezgoda dolazi do oštećenja automobila ili drugih prevoznih sredstava. Lice koje nije odgovorno za nastanak nezgode ima pravo da pretrpljenu štetu na vozilu naplati od osiguravajućeg društva kod kojeg je odgovorno lice imalo zaključen ugovor o obaveznom osiguranju.
             </p>
 
-            <h2>Vrste štete</h2>
-            <h3>Materijalna šteta</h3>
+            <h2>Rok za prijavu saobraćajne nezgode osiguranju</h2>
+            <p>
+              Učesnik u saobraćajnoj nezgodi, odnosno vlasnik oštećenog vozila, dužan je da osiguravajuće društvo obavesti o nastanku nezgode u roku od 15 dana od dana kada se nezgoda dogodila.
+            </p>
+
+            <h2>Procena štete i podnošenje zahteva</h2>
+            <p>
+              Pre podnošenja zahteva za naknadu štete, neophodno je izvršiti stručnu procenu oštećenja. Procenu vrši ovlašćeni veštak mašinske struke. Procenu može obaviti procenitelj zaposlen u osiguravajućem društvu, ali oštećeni ima pravo i da angažuje nezavisnog procenitelja.
+            </p>
+            <p>
+              Nakon izvršene procene, osiguravajućem društvu se podnosi odštetni zahtev na osnovu kog se sprovodi postupak naplate štete.
+            </p>
+
+            <h2>Rokovi za odlučivanje i isplatu</h2>
+            <p>
+              Osiguravajuće društvo je dužno da u roku od 14 dana od prijema odštetnog zahteva utvrdi osnov i visinu zahteva, dostavi obrazloženu ponudu i izvrši isplatu.
+            </p>
+            <p>Ako to nije moguće u tom roku, osiguranje je dužno da:</p>
             <ul>
-              <li>troškovi lečenja, rehabilitacije i prevoza</li>
-              <li>izgubljena zarada i umanjena radna sposobnost</li>
-              <li>šteta na vozilu, stanu, opremi i drugim stvarima</li>
-              <li>izmakla korist u poslovnim odnosima</li>
+              <li>u roku od 45 dana odluči o zahtevu za štetu na stvarima</li>
+              <li>u roku od 90 dana odluči o zahtevu za štetu na licima</li>
             </ul>
+            <p>
+              Po utvrđivanju osnova i visine štete, osiguranje je dužno da u dodatnom roku od 14 dana izvrši isplatu naknade.
+            </p>
 
-            <h3>Nematerijalna šteta</h3>
+            <h2>Šta ako osiguranje odbije zahtev?</h2>
+            <p>
+              Ako osiguravajuće društvo odbije odštetni zahtev ili ne postupi u zakonom propisanim rokovima, oštećeni ima pravo da svoja potraživanja ostvari putem sudskog postupka pred nadležnim sudom.
+            </p>
+
+            <h2>Naknada štete zbog pretrpljenih povreda</h2>
+            <p>
+              Saobraćajne nezgode često imaju za posledicu telesne povrede, lake ili teške, sa privremenim ili trajnim posledicama po zdravlje i kvalitet života. U takvim situacijama zaštita prava povređenih zahteva stručan i sistematičan pravni pristup.
+            </p>
+            <p>
+              Povređeni učesnik nezgode treba da se najkasnije u roku od 24 časa javi zdravstvenoj ustanovi radi pregleda i evidentiranja povreda, jer je pravovremena medicinska dokumentacija ključni dokaz u postupku.
+            </p>
+
+            <h2>Osnovi za naknadu zbog povreda</h2>
             <ul>
-              <li>fizički bol i pretrpljeni strah</li>
-              <li>duševni bol zbog umanjenja životne aktivnosti</li>
-              <li>duševni bol zbog naruženosti</li>
-              <li>duševni bol zbog smrti ili teškog invaliditeta bliskog lica</li>
+              <li>fizički bolovi</li>
+              <li>pretrpljeni strah</li>
+              <li>umanjenje opšte životne aktivnosti</li>
+              <li>naruženost</li>
+              <li>druge trajne ili privremene posledice</li>
             </ul>
-
-            <h2>Kako vodimo postupak</h2>
-            <h3>1. Procena slučaja</h3>
             <p>
-              Analiziramo dokumentaciju, medicinske izveštaje i okolnosti događaja, zatim dajemo realnu procenu osnova i visine potraživanja.
+              Intenzitet i trajanje bolova i straha procenjuju veštaci medicinske struke, čije mišljenje ima ključnu ulogu pri utvrđivanju visine naknade.
             </p>
 
-            <h3>2. Vansudski pregovori</h3>
+            <h2>Naknada štete zbog duševnih bolova</h2>
             <p>
-              Pripremamo odštetni zahtev i vodimo pregovore sa osiguravajućim društvom ili drugim odgovornim licem, sa ciljem brzog i povoljnog poravnanja.
+              Povrede zadobijene u saobraćajnoj nezgodi, pored fizičkog bola, mogu dovesti do duševnih bolova usled umanjenja životne aktivnosti i naruženosti, a u najtežim slučajevima i do smrti bliskog lica, što predstavlja poseban osnov za naknadu nematerijalne štete.
+            </p>
+            <h3>Umanjenje životne aktivnosti</h3>
+            <p>
+              Postoji kada zbog povrede dođe do trajnog ili dugotrajnog smanjenja sposobnosti funkcionisanja, pa oštećeno lice više ne može da obavlja životne, profesionalne ili rekreativne aktivnosti koje je ranije obavljalo.
+            </p>
+            <h3>Naruženost</h3>
+            <p>
+              Naruženost podrazumeva trajnu promenu spoljašnjeg izgleda ili funkcije tela, kao što su vidljivi ožiljci, gubitak zuba ili ekstremiteta i trajni poremećaji kretanja.
+            </p>
+            <h3>Duševni bolovi zbog smrti bliskog lica</h3>
+            <p>
+              Pravo na ovu naknadu imaju bračni drug, deca i roditelji preminulog, kao i braća i sestre ukoliko je postojala trajnija zajednica života, kao i lica koja je preminuli izdržavao.
             </p>
 
-            <h3>3. Sudska zaštita</h3>
+            <h2>Ko isplaćuje naknadu?</h2>
             <p>
-              Ako poravnanje nije moguće, vodimo parnični postupak: podnošenje tužbe, izvođenje dokaza, veštačenja, žalbeni postupak i naplata dosuđene naknade.
+              Ako je šteta posledica saobraćajne nezgode, naknada se ostvaruje od osiguravajućeg društva kod kojeg je odgovorno lice imalo zaključen ugovor o obaveznom osiguranju, a ne direktno od drugog učesnika nezgode.
             </p>
 
-            <h2>Dokumentacija koja je najčešće potrebna</h2>
-            <ul>
-              <li>zapisnik policije, prijava događaja ili druga službena evidencija</li>
-              <li>medicinska dokumentacija i izveštaji o lečenju</li>
-              <li>računi i troškovi nastali zbog štetnog događaja</li>
-              <li>fotografije, izjave svedoka i druga dokazna građa</li>
-              <li>korespondencija sa osiguravajućim društvom</li>
-            </ul>
-
-            <h2>Rokovi</h2>
+            <h2>Zašto angažovati advokata</h2>
             <p>
-              Rokovi zastarelosti su ključni. Uobičajeno važi subjektivni rok od 3 godine od saznanja za štetu i štetnika i objektivni rok od 5 godina od nastanka štete, uz posebna pravila za štetu nastalu krivičnim delom.
+              Angažovanjem advokata obezbeđuje se stručno vođenje postupka, potpuna zaštita prava oštećenog i ostvarivanje maksimalne moguće naknade, bez potrebe da se klijent sam upušta u složene postupke pred osiguravajućim društvima.
             </p>
 
-            <h2>Zašto klijenti biraju našu kancelariju</h2>
-            <ul>
-              <li>precizna procena predmeta i jasna strategija</li>
-              <li>iskustvo u pregovorima sa osiguravajućim društvima</li>
-              <li>potpuno zastupanje od zahteva do naplate</li>
-              <li>transparentna komunikacija tokom celog postupka</li>
-            </ul>
+            <h2>Napomena o visini naknade</h2>
+            <p>
+              Visina naknade uvek zavisi od okolnosti konkretnog slučaja, medicinske dokumentacije, veštačenja i aktuelne sudske prakse.
+            </p>
           </>
         ),
         en: (

@@ -15,50 +15,61 @@ export default function NekretninePage() {
         en: "Practice Area",
       }}
       description={{
-        sr: "Pravna podrška pri kupoprodaji, zakupu, proveri dokumentacije i rešavanju sporova u vezi sa nekretninama.",
+        sr: "Sveobuhvatna pravna podrška u prometu i upravljanju nekretninama, uz punu pravnu sigurnost.",
         en: "Legal support in purchase, lease, due diligence, and dispute resolution related to real estate.",
       }}
       icon={<Home className="h-8 w-8" />}
       content={{
         sr: (
           <>
-            <h2>Sigurna kupovina i prodaja nekretnina</h2>
+            <h2>Nekretnine</h2>
             <p>
-              Nekretnine su najčešće finansijski najvažnije transakcije. Pomažemo da postupak bude pravno siguran, dokumentacija uredna i rizici prepoznati pre zaključenja ugovora.
+              Pravni odnosi u vezi sa nekretninama predstavljaju jednu od najosetljivijih i najznačajnijih oblasti prava, kako za fizička, tako i za pravna lica.
+            </p>
+            <p>
+              Kancelarija pruža sveobuhvatnu pravnu pomoć u svim pitanjima koja se odnose na nekretnine, sa ciljem zaštite imovinskih interesa klijenata i sprečavanja budućih pravnih sporova.
             </p>
 
-            <h2>Pravna provera pre ugovora</h2>
+            <h2>Promet nekretnina</h2>
+            <p>Pružamo pravnu podršku u postupcima:</p>
             <ul>
-              <li>provera vlasništva i tereta na nepokretnosti</li>
-              <li>analiza dostupne dokumentacije i istorije upisa</li>
-              <li>procena ugovornih i faktičkih rizika</li>
-              <li>provera usaglašenosti podataka pre overe</li>
+              <li>kupovine i prodaje stanova, kuća i poslovnih prostora</li>
+              <li>provere pravnog statusa nekretnine</li>
+              <li>sastavljanja i pregleda kupoprodajnih ugovora i prateće dokumentacije</li>
+              <li>zastupanja pred notarima i drugim nadležnim organima</li>
             </ul>
-
-            <h2>Ugovori i pregovori</h2>
-            <ul>
-              <li>ugovori o kupoprodaji, predugovori i aneksi</li>
-              <li>ugovori o zakupu stambenog i poslovnog prostora</li>
-              <li>ugovori o poklonu i drugi imovinskopravni ugovori</li>
-              <li>pregovori o ključnim uslovima i zaštitnim klauzulama</li>
-            </ul>
-
-            <h2>Postupci nakon zaključenja ugovora</h2>
             <p>
-              Pratimo klijenta i nakon potpisivanja: od overe i podnošenja zahteva, do završetka formalnih koraka koji obezbeđuju pravnu sigurnost transakcije.
+              Poseban akcenat stavljamo na proveru vlasništva, tereta i upisa u katastar nepokretnosti, radi potpune pravne sigurnosti klijenata.
             </p>
+
+            <h2>Ugovorni odnosi i korišćenje nekretnina</h2>
+            <p>Zastupamo klijente u vezi sa:</p>
+            <ul>
+              <li>ugovorima o zakupu i podzakupu</li>
+              <li>ugovorima o doživotnom izdržavanju</li>
+              <li>ugovorima o poklonu i razmeni nepokretnosti</li>
+              <li>pravima službenosti i drugim stvarnopravnim odnosima</li>
+            </ul>
+            <p>
+              Cilj je jasno i precizno uređenje prava i obaveza ugovornih strana i prevencija sporova.
+            </p>
+
+            <h2>Legalizacija i upisi u katastar</h2>
+            <p>Pružamo pravnu pomoć u postupcima:</p>
+            <ul>
+              <li>legalizacije i ozakonjenja objekata</li>
+              <li>upisa prava svojine i drugih stvarnih prava u katastar</li>
+              <li>ispravki i usklađivanja katastarskog stanja sa faktičkim stanjem</li>
+            </ul>
 
             <h2>Sporovi u vezi sa nekretninama</h2>
-            <ul>
-              <li>sporovi iz ugovora o prometu nekretnina</li>
-              <li>sporovi oko prava svojine, poseda i korišćenja</li>
-              <li>sporovi između suvlasnika i korisnika</li>
-              <li>zahtevi za naknadu štete u vezi sa nekretninom</li>
-            </ul>
-
-            <h2>Zašto klijenti biraju ovu podršku</h2>
             <p>
-              Dobra priprema pre transakcije najčešće sprečava skupe sporove kasnije. Radimo precizno, transparentno i sa fokusom na zaštitu interesa klijenta u svakoj fazi postupka.
+              Zastupamo klijente u sudskim postupcima koji se odnose na utvrđivanje prava svojine, smetanje državine, deobu suvlasništva, raskid ili poništaj ugovora o prometu nekretnina i naknadu štete u vezi sa nekretninama.
+            </p>
+
+            <h2>Naš pristup</h2>
+            <p>
+              Svakom predmetu pristupamo temeljno i odgovorno, uz detaljnu pravnu analizu i jasno savetovanje. Naš cilj je zaštita imovine, pravna sigurnost i efikasno rešavanje svih pitanja u vezi sa nekretninama.
             </p>
           </>
         ),

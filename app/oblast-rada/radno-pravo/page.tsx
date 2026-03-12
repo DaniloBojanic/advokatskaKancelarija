@@ -15,55 +15,52 @@ export default function RadnoPravoPage() {
         en: "Practice Area",
       }}
       description={{
-        sr: "Savetovanje i zastupanje zaposlenih i poslodavaca u pitanjima radnog odnosa, otkaza i radnih sporova.",
+        sr: "Pravna pomoć i zastupanje zaposlenih i poslodavaca u svim pitanjima iz oblasti radnog prava.",
         en: "Counsel and representation for employees and employers in employment, termination, and labor disputes.",
       }}
       icon={<Users className="h-8 w-8" />}
       content={{
         sr: (
           <>
-            <h2>Podrška zaposlenima i poslodavcima</h2>
+            <h2>Radno pravo</h2>
             <p>
-              Radni odnosi zahtevaju jasno uređena prava i obaveze. Pružamo pravnu pomoć u preventivi, pregovorima i sporovima, sa ciljem da se problemi reše brzo i pravno održivo.
+              Radno pravo uređuje prava i obaveze zaposlenih i poslodavaca i predstavlja jednu od najznačajnijih oblasti prava u svakodnevnom životu.
+            </p>
+            <p>
+              Kancelarija pruža pravnu pomoć i zastupanje u svim pitanjima iz oblasti radnog prava, kako zaposlenima tako i poslodavcima, sa ciljem zaštite njihovih prava i zakonitog uređenja radnih odnosa.
             </p>
 
-            <h2>Pre zasnivanja i tokom radnog odnosa</h2>
+            <h2>Pravna zaštita zaposlenih</h2>
+            <p>Zastupamo zaposlene u postupcima koji se odnose na:</p>
             <ul>
-              <li>analiza i izrada ugovora o radu</li>
-              <li>pravila rada, interni akti i usklađenost procedura</li>
-              <li>tumačenje prava i obaveza zaposlenih i poslodavca</li>
-              <li>savetovanje o organizaciji rada i promenama radnog statusa</li>
+              <li>zasnivanje i prestanak radnog odnosa</li>
+              <li>nezakonit otkaz ugovora o radu</li>
+              <li>ostvarivanje prava na zaradu, naknade i druga primanja</li>
+              <li>zaštitu prava po osnovu radnog vremena, odmora i bolovanja</li>
+              <li>zaštitu od diskriminacije, mobinga i drugih povreda prava na radu</li>
             </ul>
-
-            <h2>Otkaz i prestanak radnog odnosa</h2>
             <p>
-              U postupcima prestanka radnog odnosa važne su forma, rokovi i dokumentacija. Savetujemo i zastupamo obe strane kako bi postupak bio zakonit i pravno siguran.
+              Pravna pomoć obuhvata savetovanje, sastavljanje podnesaka i zastupanje pred sudovima i drugim nadležnim organima.
             </p>
-            <ul>
-              <li>procena zakonitosti otkaza i postupanja poslodavca</li>
-              <li>izrada izjašnjenja, upozorenja i drugih akata</li>
-              <li>pregovori o sporazumnom prestanku radnog odnosa</li>
-              <li>zaštita prava zaposlenog kod osporavanja otkaza</li>
-            </ul>
 
-            <h2>Diskriminacija, zlostavljanje i povreda prava</h2>
+            <h2>Pravna podrška poslodavcima</h2>
+            <p>Pružamo pravnu podršku poslodavcima u vezi sa:</p>
             <ul>
-              <li>pravna analiza i plan zaštite</li>
-              <li>zastupanje u internim i sudskim postupcima</li>
-              <li>naknada štete zbog povrede prava iz rada</li>
+              <li>izradom i usklađivanjem ugovora o radu i opštih akata</li>
+              <li>sprovođenjem disciplinskih postupaka</li>
+              <li>zakonitim prestankom radnog odnosa</li>
+              <li>rešavanjem sporova sa zaposlenima</li>
+              <li>usklađivanjem poslovanja sa važećim propisima iz oblasti radnog prava</li>
             </ul>
 
             <h2>Radni sporovi</h2>
-            <ul>
-              <li>sporovi zbog zarade, naknada i drugih primanja</li>
-              <li>sporovi zbog nezakonitog otkaza</li>
-              <li>sporovi oko radnog vremena, odmora i drugih prava</li>
-              <li>zastupanje u pregovorima, medijaciji i parničnom postupku</li>
-            </ul>
-
-            <h2>Praktičan i uravnotežen pristup</h2>
             <p>
-              Cilj nam je da zaštitimo interes klijenta uz poštovanje zakona i poslovne realnosti. U svakom predmetu dajemo jasnu procenu rizika, opcija i narednih koraka.
+              Zastupamo stranke u individualnim i kolektivnim radnim sporovima pred nadležnim sudovima i drugim organima. Posebnu pažnju posvećujemo zaštiti procesnih prava stranaka i efikasnom rešavanju sporova, uz nastojanje da se sporovi, kada je to moguće, reše mirnim putem.
+            </p>
+
+            <h2>Naš pristup</h2>
+            <p>
+              Svakom predmetu pristupamo odgovorno i individualno, uz detaljnu analizu činjeničnog stanja i relevantnih propisa. Naš cilj je pravna sigurnost, zaštita prava klijenata i postizanje održivih i zakonitih rešenja u radnim odnosima.
             </p>
           </>
         ),
