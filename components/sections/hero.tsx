@@ -6,7 +6,7 @@ import { Scale } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/context"
 
 export function Hero() {
-  const { t } = useLanguage()
+  const { language, t } = useLanguage()
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-primary overflow-hidden">
@@ -39,6 +39,18 @@ export function Hero() {
               {t.hero.text}
             </p>
 
+            <div className="mb-10 flex flex-wrap gap-3 justify-center lg:justify-start">
+              <span className="rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-1.5 text-sm text-primary-foreground/90">
+                {language === "sr" ? "Individualan pristup" : "Tailored approach"}
+              </span>
+              <span className="rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-1.5 text-sm text-primary-foreground/90">
+                {language === "sr" ? "Jasna strategija" : "Clear strategy"}
+              </span>
+              <span className="rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-1.5 text-sm text-primary-foreground/90">
+                {language === "sr" ? "Brza komunikacija" : "Fast response"}
+              </span>
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-base px-8">
                 <Link href="/#zakazite-konsultacije">{t.hero.cta}</Link>
@@ -56,9 +68,10 @@ export function Hero() {
           {/* Right content - decorative */}
           <div className="hidden lg:flex justify-center">
             <div className="relative">
-              <div className="w-80 h-80 border-2 border-secondary/30 rounded-full flex items-center justify-center">
+              <div className="absolute inset-0 rounded-full blur-3xl bg-secondary/20" />
+              <div className="relative w-80 h-80 border-2 border-secondary/30 rounded-full flex items-center justify-center">
                 <div className="w-64 h-64 border-2 border-secondary/50 rounded-full flex items-center justify-center">
-                  <div className="w-48 h-48 bg-secondary/10 rounded-full flex items-center justify-center">
+                  <div className="w-48 h-48 bg-secondary/10 rounded-full flex items-center justify-center backdrop-blur-sm">
                     <Scale className="h-24 w-24 text-secondary" />
                   </div>
                 </div>

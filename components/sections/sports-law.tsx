@@ -83,7 +83,10 @@ export function SportsLaw() {
   const data = sportsLawData[language]
 
   return (
-    <section id="sportsko-pravo" className="py-24 bg-primary text-primary-foreground scroll-mt-32">
+    <section id="sportsko-pravo" className="py-28 bg-primary text-primary-foreground scroll-mt-32 relative overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 opacity-40">
+        <div className="absolute -top-40 right-0 h-96 w-96 rounded-full bg-secondary/20 blur-3xl" />
+      </div>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
@@ -91,7 +94,7 @@ export function SportsLaw() {
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-primary-foreground mt-4 mb-6 text-balance">
             {data.title}
           </h2>
-          <div className="w-24 h-1 bg-secondary mx-auto mb-6" />
+          <div className="section-title-rule mb-6" />
           <p className="text-primary-foreground/80 max-w-3xl mx-auto">
             {data.description}
           </p>
@@ -105,8 +108,8 @@ export function SportsLaw() {
             </h3>
             <div className="space-y-6">
               {data.services.map((service) => (
-                <div key={service.title} className="flex gap-4">
-                  <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center shrink-0">
+                <div key={service.title} className="rounded-xl border border-primary-foreground/18 bg-primary-foreground/7 p-5 flex gap-4 hover-lift">
+                  <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center shrink-0">
                     <service.icon className="h-6 w-6 text-secondary-foreground" />
                   </div>
                   <div>
@@ -122,7 +125,7 @@ export function SportsLaw() {
             </div>
 
             {/* Arbiter badge */}
-            <div className="mt-10 bg-primary-foreground/10 rounded-lg p-6 border border-primary-foreground/20">
+            <div className="mt-10 rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 p-6">
               <div className="flex items-center gap-4">
                 <div className="w-14 h-14 bg-secondary rounded-full flex items-center justify-center">
                   <Trophy className="h-7 w-7 text-secondary-foreground" />
@@ -140,7 +143,7 @@ export function SportsLaw() {
             <h3 className="font-serif text-2xl font-semibold mb-8">
               {data.expertiseTitle}
             </h3>
-            <div className="bg-primary-foreground/5 rounded-lg p-8 border border-primary-foreground/10">
+            <div className="rounded-xl border border-primary-foreground/15 bg-primary-foreground/6 p-8">
               <ul className="space-y-4">
                 {data.expertise.map((item, index) => (
                   <li key={index} className="flex items-center gap-4">

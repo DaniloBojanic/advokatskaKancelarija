@@ -115,7 +115,7 @@ export function Compensation() {
   const data = compensationData[language]
 
   return (
-    <section id="naknada-stete" className="py-24 bg-background scroll-mt-32">
+    <section id="naknada-stete" className="py-28 bg-background scroll-mt-32 subtle-grid">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
@@ -123,7 +123,7 @@ export function Compensation() {
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mt-4 mb-6 text-balance">
             {data.title}
           </h2>
-          <div className="w-24 h-1 bg-secondary mx-auto mb-6" />
+          <div className="section-title-rule mb-6" />
           <p className="text-muted-foreground max-w-3xl mx-auto">
             {data.description}
           </p>
@@ -132,8 +132,8 @@ export function Compensation() {
         {/* Compensation types */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           {data.types.map((type) => (
-            <div key={type.title} className="text-center">
-              <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+            <div key={type.title} className="surface-panel p-7 text-center hover-lift">
+              <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
                 <type.icon className="h-10 w-10 text-primary-foreground" />
               </div>
               <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
@@ -177,7 +177,7 @@ export function Compensation() {
 
         {/* Additional info */}
         <div className="mt-12 grid md:grid-cols-2 gap-8">
-          <div className="bg-card border border-border rounded-lg p-8">
+          <div className="surface-panel p-8">
             <h4 className="font-serif text-lg font-semibold text-foreground mb-4">
               {data.deadlines.title}
             </h4>
@@ -190,7 +190,7 @@ export function Compensation() {
               ))}
             </ul>
           </div>
-          <div className="bg-card border border-border rounded-lg p-8">
+          <div className="surface-panel p-8">
             <h4 className="font-serif text-lg font-semibold text-foreground mb-4">
               {data.rejection.title}
             </h4>

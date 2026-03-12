@@ -30,7 +30,7 @@ export function About() {
   ]
 
   return (
-    <section id="o-nama" className="py-24 bg-background scroll-mt-32">
+    <section id="o-nama" className="py-28 bg-background scroll-mt-32 subtle-grid">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
@@ -38,16 +38,16 @@ export function About() {
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mt-4 mb-6 text-balance">
             {t.about.title}
           </h2>
-          <div className="w-24 h-1 bg-secondary mx-auto" />
+          <div className="section-title-rule" />
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
-          <div>
-            <h3 className="font-serif text-2xl font-semibold text-foreground mb-6">
+          <div className="surface-panel p-7 md:p-9">
+            <h3 className="font-serif text-2xl font-semibold text-foreground mb-6 tracking-tight">
               {t.about.founderTitle}
             </h3>
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <div className="space-y-4 text-muted-foreground leading-relaxed text-[1.03rem]">
               <p>{t.about.founder}</p>
               <p>{t.about.bio1}</p>
               <p>{t.about.bio2}</p>
@@ -58,12 +58,12 @@ export function About() {
           {/* Right content - features grid */}
           <div className="grid sm:grid-cols-2 gap-6">
             {features.map((feature) => (
-              <div key={feature.title} className="bg-card border border-border rounded-lg p-6 hover:border-secondary/50 transition-colors">
+              <div key={feature.title} className="surface-panel p-6 hover-lift hover:border-secondary/40">
                 <feature.icon className="h-10 w-10 text-secondary mb-4" />
                 <h4 className="font-serif text-lg font-semibold text-foreground mb-2">
                   {feature.title}
                 </h4>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -72,7 +72,7 @@ export function About() {
         </div>
 
         {/* Additional info */}
-        <div className="mt-16 bg-muted rounded-lg p-8 lg:p-12">
+        <div className="mt-16 surface-panel-soft p-8 lg:p-12">
           <p className="text-foreground leading-relaxed text-lg text-center max-w-4xl mx-auto">
             {t.about.additional}
           </p>

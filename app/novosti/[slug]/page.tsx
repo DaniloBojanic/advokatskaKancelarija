@@ -31,8 +31,9 @@ export default function BlogPostPage() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative bg-primary pt-40 pb-16 lg:pt-44 lg:pb-20">
+        <section className="relative bg-primary pt-40 pb-16 lg:pt-44 lg:pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-5" />
+          <div className="pointer-events-none absolute -top-32 right-12 h-80 w-80 rounded-full bg-secondary/20 blur-3xl" />
           <div className="container mx-auto px-4 relative">
             <Link
               href="/novosti"
@@ -71,7 +72,7 @@ export default function BlogPostPage() {
             <div className="grid lg:grid-cols-3 gap-12">
               {/* Main Content */}
               <div className="lg:col-span-2">
-                <article className="rounded-2xl border border-border/70 bg-card p-6 shadow-sm md:p-8 lg:p-10">
+                <article className="surface-panel rounded-2xl p-6 md:p-8 lg:p-10">
                   <div
                     className="news-content"
                     dangerouslySetInnerHTML={{ __html: formatMarkdown(post.content[language]) }}
@@ -99,7 +100,7 @@ export default function BlogPostPage() {
               <div className="lg:col-span-1">
                 <div className="sticky top-24 space-y-6">
                   {/* Author Card */}
-                  <div className="bg-muted rounded-xl p-6">
+                  <div className="surface-panel-soft p-6">
                     <h3 className="font-serif text-lg font-semibold text-foreground mb-3">
                       {language === "sr" ? "O autoru" : "About the Author"}
                     </h3>
@@ -112,7 +113,7 @@ export default function BlogPostPage() {
 
                   {/* Related Posts */}
                   {relatedPosts.length > 0 && (
-                    <div className="bg-card border border-border rounded-xl p-6">
+                    <div className="surface-panel p-6">
                       <h3 className="font-serif text-lg font-semibold text-foreground mb-4">
                         {language === "sr" ? "Povezani članci" : "Related Articles"}
                       </h3>
@@ -136,7 +137,7 @@ export default function BlogPostPage() {
                   )}
 
                   {/* Contact CTA */}
-                  <div className="bg-primary rounded-xl p-6 text-primary-foreground">
+                  <div className="bg-primary rounded-xl p-6 text-primary-foreground shadow-[0_14px_34px_-24px_rgba(0,0,0,0.45)]">
                     <h3 className="font-serif text-lg font-semibold mb-3">
                       {language === "sr" ? "Potrebna vam je pomoć?" : "Need Help?"}
                     </h3>

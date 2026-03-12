@@ -22,7 +22,7 @@ export function Header() {
   ]
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/92 backdrop-blur-md border-b border-border/80 shadow-[0_1px_0_rgba(7,20,38,0.05)]">
       {/* Top bar */}
       <div className="bg-primary text-primary-foreground">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -38,16 +38,16 @@ export function Header() {
               </a>
             </div>
             <div className="flex items-center gap-2">
-              <button 
+              <button
                 onClick={() => setLanguage("sr")}
-                className={`px-2 py-1 hover:text-secondary transition-colors ${language === "sr" ? "font-medium text-secondary" : ""}`}
+                className={`px-2 py-1 hover:text-secondary transition-colors ${language === "sr" ? "font-medium text-secondary underline underline-offset-4 decoration-secondary/60" : ""}`}
               >
                 SRB
               </button>
               <span className="text-primary-foreground/50">|</span>
-              <button 
+              <button
                 onClick={() => setLanguage("en")}
-                className={`px-2 py-1 hover:text-secondary transition-colors ${language === "en" ? "font-medium text-secondary" : ""}`}
+                className={`px-2 py-1 hover:text-secondary transition-colors ${language === "en" ? "font-medium text-secondary underline underline-offset-4 decoration-secondary/60" : ""}`}
               >
                 ENG
               </button>
@@ -75,7 +75,7 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="px-4 py-2 text-sm font-medium text-foreground hover:text-secondary transition-colors"
+                className="px-4 py-2 text-sm font-medium text-foreground hover:text-secondary transition-colors rounded-md hover:bg-muted/70"
               >
                 {item.name}
               </Link>

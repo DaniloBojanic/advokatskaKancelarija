@@ -19,10 +19,13 @@ export default function NovostiPage() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative bg-primary py-20 lg:py-28">
+        <section className="relative bg-primary pt-40 pb-16 lg:pt-44 lg:pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-5" />
+          <div className="pointer-events-none absolute -top-36 right-8 h-80 w-80 rounded-full bg-secondary/25 blur-3xl" />
           <div className="container mx-auto px-4 relative">
-            <span className="text-secondary font-medium">{t.news.subtitle}</span>
+            <span className="inline-flex items-center rounded-full border border-secondary/45 bg-secondary/15 px-3 py-1 text-secondary font-medium tracking-wide">
+              {t.news.subtitle}
+            </span>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-primary-foreground font-bold mt-2">
               {t.news.title}
             </h1>
@@ -41,7 +44,7 @@ export default function NovostiPage() {
         {featuredPost && (
           <section className="pt-16 lg:pt-20">
             <div className="container mx-auto px-4">
-              <article className="rounded-2xl border border-border/80 bg-card p-6 shadow-sm transition-shadow hover:shadow-md md:p-8">
+              <article className="surface-panel hover-lift rounded-2xl p-6 md:p-8">
                 <div className="mb-4 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
                   <span className="inline-flex items-center gap-1 rounded-full bg-secondary/15 px-3 py-1 text-secondary">
                     <Tag className="h-4 w-4" />
@@ -84,7 +87,7 @@ export default function NovostiPage() {
               {otherPosts.map((post) => (
                 <article
                   key={post.id}
-                  className="group bg-card border border-border rounded-xl p-6 hover:shadow-md transition-shadow"
+                  className="group surface-panel rounded-xl p-6 hover-lift"
                 >
                   <div className="mb-4 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
                     <span className="inline-flex items-center gap-1">

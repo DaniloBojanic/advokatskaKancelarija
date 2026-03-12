@@ -14,7 +14,7 @@ export function News() {
     .slice(0, 3)
 
   return (
-    <section id="novosti" className="py-24 bg-background scroll-mt-32">
+    <section id="novosti" className="py-28 bg-background scroll-mt-32 subtle-grid">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
@@ -22,7 +22,7 @@ export function News() {
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mt-4 mb-6 text-balance">
             {t.news.title}
           </h2>
-          <div className="w-24 h-1 bg-secondary mx-auto mb-6" />
+          <div className="section-title-rule mb-6" />
           <p className="text-muted-foreground max-w-2xl mx-auto">
             {t.news.description}
           </p>
@@ -33,7 +33,7 @@ export function News() {
           {recentPosts.map((post) => (
             <article
               key={post.id}
-              className="group bg-card border border-border rounded-xl p-6 hover:border-secondary/40 transition-all duration-300 hover:shadow-md"
+              className="group surface-panel rounded-xl p-6 hover-lift hover:border-secondary/40"
             >
               <div className="mb-4">
                 <span className="inline-block px-3 py-1 bg-secondary/15 text-secondary text-xs font-medium rounded-full">

@@ -63,7 +63,7 @@ export function PracticeAreaLayout({
             <div className="grid lg:grid-cols-3 gap-12">
               {/* Main Content */}
               <div className="lg:col-span-2">
-                <article className="rounded-2xl border border-border/70 bg-card p-6 shadow-sm md:p-8 lg:p-10">
+                <article className="surface-panel rounded-2xl p-6 md:p-8 lg:p-10">
                   <div className="practice-content">{content[language]}</div>
                 </article>
               </div>
@@ -72,7 +72,7 @@ export function PracticeAreaLayout({
               <div className="lg:col-span-1">
                 <div className="sticky top-24 space-y-6">
                   {/* Contact Card */}
-                  <div className="bg-muted rounded-xl p-6">
+                  <div className="surface-panel-soft p-6">
                     <h3 className="font-serif text-xl font-semibold text-foreground mb-4">
                       {language === "sr" ? "Potrebna vam je pomoć?" : "Need Help?"}
                     </h3>
@@ -105,7 +105,7 @@ export function PracticeAreaLayout({
                   </div>
 
                   {/* Other Areas */}
-                  <div className="bg-card border border-border rounded-xl p-6">
+                  <div className="surface-panel p-6">
                     <h3 className="font-serif text-xl font-semibold text-foreground mb-4">
                       {language === "sr" ? "Ostale oblasti" : "Other Areas"}
                     </h3>

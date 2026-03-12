@@ -21,6 +21,11 @@ export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [submitError, setSubmitError] = useState<string | null>(null)
+  const mapQuery = encodeURIComponent(CONTACT.location)
+  const mapEmbedUrl =
+    process.env.NEXT_PUBLIC_MAP_EMBED_URL ||
+    `https://www.google.com/maps?q=${mapQuery}&z=14&output=embed`
+  const mapOpenUrl = `https://www.google.com/maps/search/?api=1&query=${mapQuery}`
 
   const contactInfo = [
     {
@@ -82,7 +87,7 @@ export function Contact() {
   }
 
   return (
-    <section id="kontakt" className="py-24 bg-muted scroll-mt-32">
+    <section id="kontakt" className="py-28 bg-muted scroll-mt-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
@@ -90,7 +95,7 @@ export function Contact() {
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mt-4 mb-6 text-balance">
             {t.contact.title}
           </h2>
-          <div className="w-24 h-1 bg-secondary mx-auto mb-6" />
+          <div className="section-title-rule mb-6" />
           <p className="text-muted-foreground max-w-2xl mx-auto">
             {t.contact.description}
           </p>
@@ -98,14 +103,14 @@ export function Contact() {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact info */}
-          <div>
+          <div className="surface-panel p-7 md:p-8">
             <h3 className="font-serif text-2xl font-semibold text-foreground mb-8">
               {t.contact.info}
             </h3>
             <div className="space-y-6">
               {contactInfo.map((item) => (
                 <div key={item.title} className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shrink-0 shadow-sm">
                     <item.icon className="h-6 w-6 text-primary-foreground" />
                   </div>
                   <div>
@@ -125,25 +130,40 @@ export function Contact() {
               ))}
             </div>
 
-            {/* Map placeholder */}
-            <div className="mt-10 bg-card border border-border rounded-lg overflow-hidden h-64">
-              <div className="w-full h-full bg-muted flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-12 w-12 text-muted-foreground/50 mx-auto mb-2" />
-                  <p className="text-muted-foreground text-sm">{CONTACT.location}</p>
+            {/* Embedded map */}
+            <div className="mt-10 bg-card border border-border rounded-xl overflow-hidden">
+              <iframe
+                title="Mapa lokacije kancelarije"
+                src={mapEmbedUrl}
+                className="h-72 w-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <div className="flex items-center justify-between gap-4 border-t border-border bg-background px-4 py-3 text-sm">
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <MapPin className="h-4 w-4" />
+                  <span>{CONTACT.location}</span>
                 </div>
+                <a
+                  href={mapOpenUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-primary hover:text-secondary transition-colors"
+                >
+                  {language === "sr" ? "Otvori u mapama" : "Open in maps"}
+                </a>
               </div>
             </div>
           </div>
 
           {/* Contact form */}
-          <div id="zakazite-konsultacije" className="scroll-mt-32">
+          <div id="zakazite-konsultacije" className="scroll-mt-32 surface-panel p-7 md:p-8">
             <h3 className="font-serif text-2xl font-semibold text-foreground mb-8">
               {t.contact.form}
             </h3>
 
             {submitted ? (
-              <div className="bg-card border border-secondary rounded-lg p-8 text-center">
+              <div className="bg-card border border-secondary rounded-xl p-8 text-center">
                 <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
                   <Send className="h-8 w-8 text-secondary-foreground" />
                 </div>

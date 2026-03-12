@@ -57,7 +57,7 @@ export function PracticeAreas() {
   ]
 
   return (
-    <section id="oblast-rada" className="py-24 bg-muted scroll-mt-32">
+    <section id="oblast-rada" className="py-28 bg-muted scroll-mt-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
@@ -65,7 +65,7 @@ export function PracticeAreas() {
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mt-4 mb-6 text-balance">
             {t.practiceAreas.title}
           </h2>
-          <div className="w-24 h-1 bg-secondary mx-auto mb-6" />
+          <div className="section-title-rule mb-6" />
           <p className="text-muted-foreground max-w-2xl mx-auto">
             {t.practiceAreas.description}
           </p>
@@ -77,11 +77,11 @@ export function PracticeAreas() {
             <Link
               key={area.title}
               href={area.href}
-              className={`group bg-card border rounded-lg p-8 hover:border-secondary transition-all duration-300 hover:shadow-lg ${
+              className={`group rounded-xl p-8 hover-lift surface-panel hover:border-secondary/45 ${
                 area.featured ? 'border-secondary/50' : 'border-border'
               }`}
             >
-              <div className={`w-14 h-14 rounded-lg flex items-center justify-center mb-6 ${
+              <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 shadow-sm ${
                 area.featured ? 'bg-secondary text-secondary-foreground' : 'bg-primary/10 text-primary'
               }`}>
                 <area.icon className="h-7 w-7" />
@@ -89,7 +89,7 @@ export function PracticeAreas() {
               <h3 className="font-serif text-xl font-semibold text-foreground mb-3 group-hover:text-secondary transition-colors">
                 {area.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+              <p className="text-muted-foreground text-sm leading-relaxed mb-5">
                 {area.description}
               </p>
               <span className="inline-flex items-center gap-2 text-secondary text-sm font-medium group-hover:gap-3 transition-all">
