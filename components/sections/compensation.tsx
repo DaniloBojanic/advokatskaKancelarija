@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { Car, Heart, Brain, Clock, FileCheck, Scale } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/context"
 
@@ -8,6 +9,7 @@ const compensationData = {
     subtitle: "Specijalizacija",
     title: "Naknada štete",
     description: "Zastupamo fizička i pravna lica u svim vrstama postupaka naknade štete, kako u sudskim, tako i u vansudskim postupcima. Kancelarija poseduje značajno iskustvo u zastupanju klijenata pred osiguravajućim društvima.",
+    learnMore: "Saznajte više o oblasti",
     types: [
       {
         icon: Car,
@@ -60,6 +62,7 @@ const compensationData = {
     subtitle: "Specialization",
     title: "Compensation",
     description: "We represent individuals and legal entities in all types of compensation proceedings, both in court and out-of-court. The office has significant experience in representing clients before insurance companies.",
+    learnMore: "Learn more about this area",
     types: [
       {
         icon: Car,
@@ -127,6 +130,14 @@ export function Compensation() {
           <p className="text-muted-foreground max-w-3xl mx-auto">
             {data.description}
           </p>
+          <div className="mt-8">
+            <Link
+              href="/oblast-rada/naknada-stete"
+              className="inline-flex items-center justify-center rounded-md bg-secondary px-6 py-3 text-sm font-semibold text-secondary-foreground shadow-sm transition-colors hover:bg-secondary/90"
+            >
+              {data.learnMore}
+            </Link>
+          </div>
         </div>
 
         {/* Compensation types */}

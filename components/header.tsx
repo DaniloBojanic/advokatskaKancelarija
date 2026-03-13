@@ -1,9 +1,18 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
-import { Menu, X, Phone, Mail } from "lucide-react"
+import { Menu, X, Phone, Mail, ChevronDown, Car, Gavel, Building2, Trophy, Home, Briefcase } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 import { useLanguage } from "@/lib/i18n/context"
 import { CONTACT } from "@/lib/contact"
 
@@ -11,12 +20,23 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { language, setLanguage, t } = useLanguage()
 
-  const navigation = [
+  const practiceAreaLinks = [
+    { name: t.practiceAreas.areas.compensation.title, href: "/oblast-rada/naknada-stete", icon: Car },
+    { name: t.practiceAreas.areas.misdemeanor.title, href: "/oblast-rada/prekrsajno-pravo", icon: Gavel },
+    { name: t.practiceAreas.areas.commercial.title, href: "/oblast-rada/privredno-pravo", icon: Building2 },
+    { name: t.practiceAreas.areas.sports.title, href: "/oblast-rada/sportsko-pravo", icon: Trophy },
+    { name: t.practiceAreas.areas.realEstate.title, href: "/oblast-rada/nekretnine", icon: Home },
+    { name: t.practiceAreas.areas.labor.title, href: "/oblast-rada/radno-pravo", icon: Briefcase },
+  ]
+
+  const primaryNavigation = [
     { name: t.nav.home, href: "/" },
     { name: t.nav.about, href: "/#o-nama" },
-    { name: t.nav.practiceAreas, href: "/#oblast-rada" },
-    { name: t.nav.compensation, href: "/#naknada-stete" },
-    { name: t.nav.sportsLaw, href: "/#sportsko-pravo" },
+  ]
+
+  const secondaryNavigation = [
+    { name: t.nav.compensation, href: "/oblast-rada/naknada-stete" },
+    { name: t.nav.sportsLaw, href: "/oblast-rada/sportsko-pravo" },
     { name: t.nav.news, href: "/#novosti" },
     { name: t.nav.contact, href: "/#kontakt" },
   ]
@@ -61,17 +81,59 @@ export function Header() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="flex flex-col">
-              <span className="font-serif text-xl font-bold text-primary tracking-wide">TOMANOVIĆ</span>
-              <span className="text-xs text-muted-foreground tracking-widest uppercase">
-                {language === "sr" ? "Advokatska kancelarija" : "Law Office"}
-              </span>
-            </div>
+            <Image
+              src="/tomanovic-logo.png"
+              alt={language === "sr" ? "Advokatska kancelarija Tomanović" : "Tomanovic Law Office"}
+              width={500}
+              height={260}
+              priority
+              className="h-12 w-auto rounded-md sm:h-14"
+            />
           </Link>
 
           {/* Desktop navigation */}
           <div className="hidden lg:flex lg:items-center lg:gap-1">
-            {navigation.map((item) => (
+            {primaryNavigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="px-4 py-2 text-sm font-medium text-foreground hover:text-secondary transition-colors rounded-md hover:bg-muted/70"
+              >
+                {item.name}
+              </Link>
+            ))}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="inline-flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground hover:text-secondary transition-colors rounded-md hover:bg-muted/70 outline-none">
+                  {t.nav.practiceAreas}
+                  <ChevronDown className="h-4 w-4 opacity-70" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent
+                align="start"
+                sideOffset={10}
+                className="min-w-72 rounded-xl border-border/70 bg-background/95 p-2 shadow-[0_18px_42px_rgba(7,20,38,0.18)] backdrop-blur-md"
+              >
+                <DropdownMenuLabel className="px-3 pb-1 pt-2 text-[11px] uppercase tracking-[0.14em] text-muted-foreground">
+                  {language === "sr" ? "Oblasti rada" : "Practice Areas"}
+                </DropdownMenuLabel>
+                <DropdownMenuItem asChild className="rounded-lg px-3 py-2.5">
+                  <Link href="/#oblast-rada">
+                    {language === "sr" ? "Pregled oblasti rada" : "Practice Areas Overview"}
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator className="mx-2 my-2" />
+                {practiceAreaLinks.map((item) => (
+                  <DropdownMenuItem key={item.href} asChild className="rounded-lg px-3 py-2.5">
+                    <Link href={item.href} className="flex items-center gap-2.5">
+                      <item.icon className="h-4 w-4 text-secondary" />
+                      <span>{item.name}</span>
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+            {secondaryNavigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -104,7 +166,38 @@ export function Header() {
         {mobileMenuOpen && (
           <div className="lg:hidden border-t border-border py-4">
             <div className="flex flex-col gap-2">
-              {navigation.map((item) => (
+              {primaryNavigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="px-4 py-3 text-base font-medium text-foreground hover:bg-muted rounded-lg transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <div className="px-4 pt-2 pb-1 text-sm font-semibold text-foreground/80">
+                {t.nav.practiceAreas}
+              </div>
+              <Link
+                href="/#oblast-rada"
+                className="px-4 py-2 text-sm text-muted-foreground hover:bg-muted rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {language === "sr" ? "Pregled oblasti rada" : "Practice Areas Overview"}
+              </Link>
+              {practiceAreaLinks.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="px-4 py-2 text-sm text-muted-foreground hover:bg-muted rounded-lg transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <div className="my-2 h-px bg-border" />
+              {secondaryNavigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}

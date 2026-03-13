@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { Trophy, Users, FileText, Scale, Target, Shield } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/context"
 
@@ -8,6 +9,7 @@ const sportsLawData = {
     subtitle: "Specijalizacija",
     title: "Sportsko pravo",
     description: "Sportsko pravo predstavlja specifičnu i dinamičnu oblast prava koja obuhvata pravne odnose nastale u vezi sa sportskim aktivnostima, sportskim organizacijama i učesnicima u sportu.",
+    learnMore: "Saznajte više o oblasti",
     supportTitle: "Pravna podrška u sportu",
     services: [
       {
@@ -44,6 +46,7 @@ const sportsLawData = {
     subtitle: "Specialization",
     title: "Sports Law",
     description: "Sports law is a specific and dynamic area of law that covers legal relations arising in connection with sports activities, sports organizations and participants in sports.",
+    learnMore: "Learn more about this area",
     supportTitle: "Legal Support in Sports",
     services: [
       {
@@ -98,6 +101,14 @@ export function SportsLaw() {
           <p className="text-primary-foreground/80 max-w-3xl mx-auto">
             {data.description}
           </p>
+          <div className="mt-8">
+            <Link
+              href="/oblast-rada/sportsko-pravo"
+              className="inline-flex items-center justify-center rounded-md border border-secondary bg-secondary px-6 py-3 text-sm font-semibold text-secondary-foreground shadow-sm transition-colors hover:bg-secondary/90"
+            >
+              {data.learnMore}
+            </Link>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
