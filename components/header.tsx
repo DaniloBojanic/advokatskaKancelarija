@@ -84,10 +84,10 @@ export function Header() {
             <Image
               src="/tomanovic-logo.png"
               alt={language === "sr" ? "Advokatska kancelarija Tomanović" : "Tomanovic Law Office"}
-              width={500}
-              height={260}
+              width={380}
+              height={220}
               priority
-              className="h-12 w-auto rounded-md sm:h-14"
+              className="h-14 w-auto rounded-md sm:h-16"
             />
           </Link>
 

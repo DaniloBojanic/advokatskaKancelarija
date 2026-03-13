@@ -75,12 +75,17 @@ export function Contact() {
 
       setSubmitted(true)
       setFormData({ name: "", email: "", phone: "", subject: "", message: "" })
-    } catch {
-      setSubmitError(
+    } catch (error) {
+      const fallbackMessage =
         language === "sr"
           ? "Došlo je do greške prilikom slanja. Pokušajte ponovo ili nas kontaktirajte emailom."
           : "There was an error while sending your message. Please try again or contact us by email."
-      )
+
+      if (error instanceof Error && error.message) {
+        setSubmitError(error.message)
+      } else {
+        setSubmitError(fallbackMessage)
+      }
     } finally {
       setIsSubmitting(false)
     }
