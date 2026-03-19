@@ -1,8 +1,8 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Scale } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/context"
 
 export function Hero() {
@@ -22,7 +22,15 @@ export function Hero() {
           {/* Left content */}
           <div className="text-center lg:text-left">
             <div className="flex items-center justify-center lg:justify-start gap-2 mb-6">
-              <Scale className="h-8 w-8 text-secondary" />
+              <div className="relative h-8 w-8 overflow-hidden rounded-sm">
+                <Image
+                  src="/tomanovic-logo.png"
+                  alt={language === "sr" ? "Logo kancelarije Tomanović" : "Tomanovic Law Office logo"}
+                  width={380}
+                  height={220}
+                  className="absolute left-1/2 top-0 w-[6rem] max-w-none -translate-x-1/2"
+                />
+              </div>
               <span className="text-secondary font-medium tracking-wider uppercase text-sm">{t.hero.subtitle}</span>
             </div>
             
@@ -72,7 +80,15 @@ export function Hero() {
               <div className="relative w-80 h-80 border-2 border-secondary/30 rounded-full flex items-center justify-center">
                 <div className="w-64 h-64 border-2 border-secondary/50 rounded-full flex items-center justify-center">
                   <div className="w-48 h-48 bg-secondary/10 rounded-full flex items-center justify-center backdrop-blur-sm">
-                    <Scale className="h-24 w-24 text-secondary" />
+                    <div className="relative h-28 w-28 overflow-hidden rounded-sm">
+                      <Image
+                        src="/tomanovic-logo.png"
+                        alt={language === "sr" ? "Logo kancelarije Tomanović" : "Tomanovic Law Office logo"}
+                        width={380}
+                        height={220}
+                        className="absolute left-1/2 top-0 w-[21rem] max-w-none -translate-x-1/2"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
