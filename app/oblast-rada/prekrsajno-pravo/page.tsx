@@ -56,7 +56,7 @@ export default function PrekrsajnoPravoPage() {
               <li>dovesti do obustave postupka kada za to postoje zakonski uslovi</li>
             </ul>
 
-            <h2>Sankcije u prekršajnom postupku</h2>
+            <h2>Sankcije u prekršajnim postupcima</h2>
             <p>
               Za prekršaje mogu biti izrečene novčane kazne, opomene, zaštitne mere i druge zakonom predviđene sankcije. Pravovremeno i stručno postupanje u velikom broju slučajeva može značajno uticati na visinu kazne ili na njeno potpuno izostavljanje.
             </p>

@@ -13,6 +13,7 @@ export default function NovostiPage() {
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   )
   const [featuredPost, ...otherPosts] = sortedPosts
+  const hasPosts = sortedPosts.length > 0
 
   return (
     <>
@@ -75,48 +76,69 @@ export default function NovostiPage() {
           </section>
         )}
 
-        {/* Article Grid */}
-        <section className="py-16 lg:py-24">
-          <div className="container mx-auto px-4">
-            <div className="mb-8">
-              <h3 className="font-serif text-2xl font-semibold text-foreground">
-                {language === "sr" ? "Svi članci" : "All Articles"}
-              </h3>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {otherPosts.map((post) => (
-                <article
-                  key={post.id}
-                  className="group surface-panel rounded-xl p-6 hover-lift"
-                >
-                  <div className="mb-4 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-                    <span className="inline-flex items-center gap-1">
-                      <Calendar className="h-4 w-4" />
-                      {formatDate(post.date, language)}
-                    </span>
-                    <span className="inline-flex items-center gap-1 rounded-full bg-muted px-2.5 py-1">
-                      <Tag className="h-4 w-4" />
-                      {post.category[language]}
-                    </span>
-                  </div>
-                  <h2 className="font-serif text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-                    <Link href={`/novosti/${post.slug}`}>{post.title[language]}</Link>
-                  </h2>
-                  <p className="text-muted-foreground mb-5 line-clamp-3 leading-relaxed">
-                    {post.excerpt[language]}
-                  </p>
-                  <Link
-                    href={`/novosti/${post.slug}`}
-                    className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
+        {hasPosts ? (
+          <section className="py-16 lg:py-24">
+            <div className="container mx-auto px-4">
+              <div className="mb-8">
+                <h3 className="font-serif text-2xl font-semibold text-foreground">
+                  {language === "sr" ? "Svi članci" : "All Articles"}
+                </h3>
+              </div>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {otherPosts.map((post) => (
+                  <article
+                    key={post.id}
+                    className="group surface-panel rounded-xl p-6 hover-lift"
                   >
-                    {t.news.readMore}
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </article>
-              ))}
+                    <div className="mb-4 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+                      <span className="inline-flex items-center gap-1">
+                        <Calendar className="h-4 w-4" />
+                        {formatDate(post.date, language)}
+                      </span>
+                      <span className="inline-flex items-center gap-1 rounded-full bg-muted px-2.5 py-1">
+                        <Tag className="h-4 w-4" />
+                        {post.category[language]}
+                      </span>
+                    </div>
+                    <h2 className="font-serif text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                      <Link href={`/novosti/${post.slug}`}>{post.title[language]}</Link>
+                    </h2>
+                    <p className="text-muted-foreground mb-5 line-clamp-3 leading-relaxed">
+                      {post.excerpt[language]}
+                    </p>
+                    <Link
+                      href={`/novosti/${post.slug}`}
+                      className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
+                    >
+                      {t.news.readMore}
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </article>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        ) : (
+          <section className="py-16 lg:py-24">
+            <div className="container mx-auto px-4">
+              <div className="surface-panel rounded-2xl p-8 md:p-10 text-center">
+                <h2 className="font-serif text-3xl font-semibold text-foreground">
+                  {t.news.emptyTitle}
+                </h2>
+                <p className="mt-4 mx-auto max-w-2xl text-muted-foreground text-lg leading-relaxed">
+                  {t.news.emptyDescription}
+                </p>
+                <Link
+                  href="/#zakazite-konsultacije"
+                  className="mt-8 inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
+                >
+                  {t.news.emptyCta}
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* CTA Section */}
         <section className="py-16 bg-muted">

@@ -27,9 +27,9 @@ export default function NaknadaStetePage() {
               U najvećem broju saobraćajnih nezgoda dolazi do oštećenja automobila ili drugih prevoznih sredstava. Lice koje nije odgovorno za nastanak nezgode ima pravo da pretrpljenu štetu na vozilu naplati od osiguravajućeg društva kod kojeg je odgovorno lice imalo zaključen ugovor o obaveznom osiguranju.
             </p>
 
-            <h2>Rok za prijavu saobraćajne nezgode osiguranju</h2>
+            <h2>Obaveštenje o saobraćajnoj nezgodi</h2>
             <p>
-              Učesnik u saobraćajnoj nezgodi, odnosno vlasnik oštećenog vozila, dužan je da osiguravajuće društvo obavesti o nastanku nezgode u roku od 15 dana od dana kada se nezgoda dogodila.
+              Učesnik u saobraćajnoj nezgodi, odnosno vlasnik oštećenog vozila, dužan je da osiguravajuće društvo obavesti o nastanku nezgode nakon što se nezgoda dogodila.
             </p>
 
             <h2>Procena štete i podnošenje zahteva</h2>
@@ -63,7 +63,7 @@ export default function NaknadaStetePage() {
               Saobraćajne nezgode često imaju za posledicu telesne povrede, lake ili teške, sa privremenim ili trajnim posledicama po zdravlje i kvalitet života. U takvim situacijama zaštita prava povređenih zahteva stručan i sistematičan pravni pristup.
             </p>
             <p>
-              Povređeni učesnik nezgode treba da se najkasnije u roku od 24 časa javi zdravstvenoj ustanovi radi pregleda i evidentiranja povreda, jer je pravovremena medicinska dokumentacija ključni dokaz u postupku.
+              Povređeni učesnik nezgode treba da se javi zdravstvenoj ustanovi radi pregleda i evidentiranja povreda, jer je medicinska dokumentacija ključni dokaz u postupku.
             </p>
 
             <h2>Osnovi za naknadu zbog povreda</h2>

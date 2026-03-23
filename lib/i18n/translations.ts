@@ -25,8 +25,8 @@ export const translations = {
       founderTitle: "Arsenije Tomanović",
       founder: "Osnivač advokatske kancelarije je advokat Arsenije Tomanović.",
       bio1: "Arsenije Tomanović je advokat sa sedištem u Novom Sadu, sa posebnim fokusom na građansko, sportsko i prekršajno pravo. Diplomirao je na Pravnom fakultetu Univerziteta u Novom Sadu, gde je stekao čvrste teorijske i praktične osnove pravne struke.",
-      bio2: "U okviru svog profesionalnog angažmana, imenovan je za stalnog arbitra Rukometnog saveza Srbije, gde učestvuje u rešavanju sporova u oblasti sportskog prava i sportskih odnosa.",
-      bio3: "Poseduje dodatnu specijalizaciju iz oblasti lobiranja, stečenu kroz stručnu obuku Agencije za sprečavanje korupcije, čime je dodatno unapredio znanja iz oblasti regulative, javnih politika i zastupanja interesa u skladu sa važećim propisima.",
+      bio2: "U okviru svog profesionalnog angažmana, imenovan je za arbitra Stalne arbitraže Rukometnog saveza Srbije, gde učestvuje u rešavanju sporova u oblasti sportskog prava i sportskih odnosa.",
+      bio3: "Poseduje dodatnu specijalizaciju iz oblasti lobiranja, stečenu kroz stručnu obuku Agencije za sprečavanje korupcije, čime je dodatno unapredio znanja iz oblasti regulative, javnih politika i zastupanja interesa u skladu sa važećim propisima. Upisan je u Registar lobista Republike Srbije.",
       features: {
         integrity: { title: "Integritet", description: "Profesionalni pristup i etičko postupanje u svakom predmetu" },
         expertise: { title: "Stručnost", description: "Kontinuirano usavršavanje i praćenje zakonskih promena" },
@@ -106,6 +106,9 @@ export const translations = {
       title: "Novosti",
       description: "Pratite naše stručne članke i aktuelnosti iz oblasti prava.",
       readMore: "Pročitajte više",
+      emptyTitle: "Novi tekstovi uskoro",
+      emptyDescription: "Stručni članci i pravne aktuelnosti biće objavljeni uskoro.",
+      emptyCta: "Kontaktirajte nas",
     },
   },
   en: {
@@ -215,6 +218,9 @@ export const translations = {
       title: "News",
       description: "Follow our expert articles and current events in the field of law.",
       readMore: "Read More",
+      emptyTitle: "New articles coming soon",
+      emptyDescription: "The News page remains active, and expert articles and legal updates will be published soon.",
+      emptyCta: "Contact Us",
     },
   },
 } as const

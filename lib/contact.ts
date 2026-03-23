@@ -1,5 +1,5 @@
 export const CONTACT = {
-  phoneDisplay: "063 276 773",
+  phoneDisplay: "+381 63 276 773",
   phoneHref: "tel:063276773",
   email: "tomanovicarsenije@gmail.com",
   emailHref: "mailto:tomanovicarsenije@gmail.com",
