@@ -19,6 +19,7 @@ export default function RadnoPravoPage() {
         en: "Counsel and representation for employees and employers in employment, termination, and labor disputes.",
       }}
       icon={<Users className="h-8 w-8" />}
+      faqCategories={["labor"]}
       content={{
         sr: (
           <>

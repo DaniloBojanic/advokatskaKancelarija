@@ -21,6 +21,7 @@ export function Footer() {
     { name: t.nav.home, href: "/" },
     { name: t.nav.about, href: "/#o-nama" },
     { name: t.nav.practiceAreas, href: "/#oblast-rada" },
+    { name: t.nav.faq, href: "/cesta-pitanja" },
     { name: t.nav.contact, href: "/#kontakt" },
   ]
 

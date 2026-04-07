@@ -18,12 +18,23 @@ export function generateMetadata({
     })
   }
 
-  return createPageMetadata({
+  const metadata = createPageMetadata({
     title: post.title.sr,
     description: post.excerpt.sr,
     path: `/novosti/${post.slug}`,
-    keywords: [post.category.sr, "pravni članak", "advokat Novi Sad"],
+    keywords: [post.category.sr, "pravni članak", "advokat Novi Sad", "saobraćajna kazna", "prekršajni sud"],
   })
+
+  return {
+    ...metadata,
+    openGraph: {
+      ...metadata.openGraph,
+      type: "article",
+      publishedTime: `${post.date}T09:00:00+02:00`,
+      authors: ["Arsenije Tomanović"],
+      section: post.category.sr,
+    },
+  }
 }
 
 export default function BlogPostLayout({

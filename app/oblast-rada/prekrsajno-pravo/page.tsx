@@ -19,6 +19,7 @@ export default function PrekrsajnoPravoPage() {
         en: "We provide defense and legal counsel in misdemeanor proceedings before competent authorities and courts.",
       }}
       icon={<Gavel className="h-8 w-8" />}
+      faqCategories={["traffic"]}
       content={{
         sr: (
           <>

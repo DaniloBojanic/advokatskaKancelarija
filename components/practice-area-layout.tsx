@@ -5,8 +5,10 @@ import { ArrowLeft, Phone, Mail, Scale } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { FaqSection } from "@/components/faq-section"
 import { useLanguage } from "@/lib/i18n/context"
 import { CONTACT } from "@/lib/contact"
+import type { FaqCategoryId } from "@/lib/faq-data"
 
 interface PracticeAreaLayoutProps {
   title: { sr: string; en: string }
@@ -14,6 +16,7 @@ interface PracticeAreaLayoutProps {
   description: { sr: string; en: string }
   content: { sr: React.ReactNode; en: React.ReactNode }
   icon: React.ReactNode
+  faqCategories?: FaqCategoryId[]
 }
 
 export function PracticeAreaLayout({
@@ -22,6 +25,7 @@ export function PracticeAreaLayout({
   description,
   content,
   icon,
+  faqCategories,
 }: PracticeAreaLayoutProps) {
   const { language, t } = useLanguage()
 
@@ -159,6 +163,26 @@ export function PracticeAreaLayout({
             </div>
           </div>
         </section>
+
+        {faqCategories && faqCategories.length > 0 && (
+          <FaqSection
+            categories={faqCategories}
+            title={{
+              sr: "Česta pitanja iz ove oblasti",
+              en: "Frequently Asked Questions in This Area",
+            }}
+            description={{
+              sr: "Izdvojili smo kratke odgovore na pitanja koja klijenti najčešće postavljaju u vezi sa ovom pravnom oblašću.",
+              en: "We have highlighted short answers to the questions clients most often ask in connection with this legal area.",
+            }}
+            ctaHref="/cesta-pitanja"
+            ctaLabel={{
+              sr: "Pogledajte sva pitanja",
+              en: "View All Questions",
+            }}
+            compact
+          />
+        )}
 
         {/* CTA Section */}
         <section className="py-16 bg-primary">

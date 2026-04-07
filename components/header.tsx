@@ -37,6 +37,7 @@ export function Header() {
   const secondaryNavigation = [
     { name: t.nav.compensation, href: "/oblast-rada/naknada-stete" },
     { name: t.nav.sportsLaw, href: "/oblast-rada/sportsko-pravo" },
+    { name: t.nav.faq, href: "/cesta-pitanja" },
     { name: t.nav.news, href: "/#novosti" },
     { name: t.nav.contact, href: "/#kontakt" },
   ]

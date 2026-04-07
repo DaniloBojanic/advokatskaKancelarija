@@ -6,6 +6,7 @@ export const translations = {
       practiceAreas: "Oblast rada",
       compensation: "Naknada štete",
       sportsLaw: "Sportsko pravo",
+      faq: "Česta pitanja",
       news: "Novosti",
       contact: "Kontakt",
       schedule: "Zakažite konsultacije",
@@ -110,6 +111,11 @@ export const translations = {
       emptyDescription: "Stručni članci i pravne aktuelnosti biće objavljeni uskoro.",
       emptyCta: "Kontaktirajte nas",
     },
+    faq: {
+      subtitle: "FAQ",
+      title: "Česta pitanja",
+      description: "Odgovori na najčešća pitanja koja klijenti postavljaju pre konsultacija i tokom rešavanja pravnih problema.",
+    },
   },
   en: {
     nav: {
@@ -118,6 +124,7 @@ export const translations = {
       practiceAreas: "Practice Areas",
       compensation: "Compensation",
       sportsLaw: "Sports Law",
+      faq: "FAQ",
       news: "News",
       contact: "Contact",
       schedule: "Schedule Consultation",
@@ -221,6 +228,11 @@ export const translations = {
       emptyTitle: "New articles coming soon",
       emptyDescription: "The News page remains active, and expert articles and legal updates will be published soon.",
       emptyCta: "Contact Us",
+    },
+    faq: {
+      subtitle: "FAQ",
+      title: "Frequently Asked Questions",
+      description: "Answers to the most common questions clients ask before consultations and during the resolution of legal matters.",
     },
   },
 } as const

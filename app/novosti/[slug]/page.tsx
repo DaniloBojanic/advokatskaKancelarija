@@ -25,6 +25,39 @@ export default function BlogPostPage() {
     .filter(p => p.id !== post.id && p.category.sr === post.category.sr)
     .slice(0, 2)
   const readingTime = estimateReadingTime(post.content[language])
+  const trafficFaqSchema =
+    post.slug === "kako-osporiti-saobracajnu-kaznu-u-srbiji"
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "Da li ima smisla angažovati advokata zbog saobraćajne kazne?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "U mnogim slučajevima ima. Često je moguće smanjiti kaznu, izbeći zabranu upravljanja vozilom ili u potpunosti izbeći kaznu.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Dobio sam poziv iz prekršajnog suda – šta to zapravo znači?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Poziv znači da je pokrenut prekršajni postupak i da sud želi da se izjasnite o prekršaju koji vam se stavlja na teret. Važno je reagovati na vreme.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Da li je moguće osporiti kaznu koju je izdala kamera?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "U određenim situacijama jeste, naročito ako postoje proceduralne nepravilnosti ili nedovoljno dokaza.",
+              },
+            },
+          ],
+        }
+      : null
 
   return (
     <>
@@ -162,6 +195,12 @@ export default function BlogPostPage() {
         </section>
       </main>
       <Footer />
+      {trafficFaqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(trafficFaqSchema) }}
+        />
+      )}
     </>
   )
 }
@@ -244,7 +283,12 @@ function formatMarkdown(text: string): string {
 
 function applyInlineFormatting(value: string): string {
   const safe = escapeHtml(value)
-  return safe.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+  return safe
+    .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+    .replace(
+      /\[([^\]]+)\]\(([^)]+)\)/g,
+      '<a href="$2" class="text-primary underline underline-offset-4 hover:text-secondary transition-colors">$1</a>',
+    )
 }
 
 function escapeHtml(value: string): string {

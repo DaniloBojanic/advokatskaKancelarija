@@ -6,6 +6,7 @@ import { PracticeAreas } from "@/components/sections/practice-areas"
 import { Compensation } from "@/components/sections/compensation"
 import { SportsLaw } from "@/components/sections/sports-law"
 import { News } from "@/components/sections/news"
+import { FaqPreview } from "@/components/sections/faq-preview"
 import { Contact } from "@/components/sections/contact"
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         <Compensation />
         <SportsLaw />
         <News />
+        <FaqPreview />
         <Contact />
       </main>
       <Footer />

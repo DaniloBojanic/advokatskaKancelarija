@@ -19,6 +19,7 @@ export default function NekretninePage() {
         en: "Legal support in purchase, lease, due diligence, and dispute resolution related to real estate.",
       }}
       icon={<Home className="h-8 w-8" />}
+      faqCategories={["real-estate"]}
       content={{
         sr: (
           <>
