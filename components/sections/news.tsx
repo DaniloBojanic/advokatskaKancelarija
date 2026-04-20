@@ -38,7 +38,7 @@ export function News() {
                 >
                   <div className="mb-4">
                     <span className="inline-block px-3 py-1 bg-secondary/15 text-secondary text-xs font-medium rounded-full">
-                      {post.category[language]}
+                      {language === "sr" ? "Blog" : "Blog"}
                     </span>
                   </div>
 

@@ -49,7 +49,7 @@ export default function NovostiPage() {
                 <div className="mb-4 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
                   <span className="inline-flex items-center gap-1 rounded-full bg-secondary/15 px-3 py-1 text-secondary">
                     <Tag className="h-4 w-4" />
-                    {featuredPost.category[language]}
+                    {language === "sr" ? "Blog" : "Blog"}
                   </span>
                   <span className="inline-flex items-center gap-1">
                     <Calendar className="h-4 w-4" />
@@ -97,7 +97,7 @@ export default function NovostiPage() {
                       </span>
                       <span className="inline-flex items-center gap-1 rounded-full bg-muted px-2.5 py-1">
                         <Tag className="h-4 w-4" />
-                        {post.category[language]}
+                        {language === "sr" ? "Blog" : "Blog"}
                       </span>
                     </div>
                     <h2 className="font-serif text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
