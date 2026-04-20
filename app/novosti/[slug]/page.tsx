@@ -86,7 +86,7 @@ export default function BlogPostPage() {
               </span>
               <span className="flex items-center gap-1 bg-secondary/20 text-secondary px-2 py-1 rounded">
                 <Tag className="h-4 w-4" />
-                {post.category[language]}
+                {language === "sr" ? "Blog" : "Blog"}
               </span>
             </div>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground font-bold max-w-4xl">
