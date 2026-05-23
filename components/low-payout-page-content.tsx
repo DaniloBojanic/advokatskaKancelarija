@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useCallback } from "react"
-import { ArrowLeft, CarFront, CheckCircle2 } from "lucide-react"
+import { ArrowLeft, CarFront } from "lucide-react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -62,7 +62,6 @@ export function LowPayoutPageContent() {
       documents: [
         "procena štete koju je sačinilo osiguravajuće društvo",
         "fotografije oštećenja na vozilu",
-        "predračun ili račun servisa",
         "zapisnik policije ili evropski izveštaj o saobraćajnoj nezgodi",
         "dokaz o izvršenoj isplati",
         "komunikacija sa osiguravajućim društvom",
@@ -112,7 +111,6 @@ export function LowPayoutPageContent() {
       documents: [
         "the damage assessment prepared by the insurance company",
         "photographs of the damage to the vehicle",
-        "a workshop estimate or invoice",
         "the police report or European accident statement",
         "proof of the payment made",
         "communication with the insurance company",
@@ -185,40 +183,9 @@ export function LowPayoutPageContent() {
                   ))}
                 </div>
 
-                <section className="mt-12 rounded-2xl border border-border/70 bg-muted/30 p-6 md:p-8">
-                  <h3 className="font-serif text-2xl font-semibold text-foreground">{copy.documentsTitle}</h3>
-                  <ul className="mt-5 space-y-3 text-base leading-8 text-muted-foreground">
-                    {copy.documents.map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <span className="mt-3 h-2 w-2 shrink-0 rounded-full bg-secondary" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
               </article>
 
               <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
-                <div className="surface-panel rounded-2xl p-6 md:p-8">
-                  <h3 className="font-serif text-2xl font-semibold text-foreground">
-                    {language === "sr" ? "Kada ima smisla da proverite slučaj" : "When it makes sense to request a review"}
-                  </h3>
-                  <ul className="mt-5 space-y-4 text-sm leading-7 text-muted-foreground md:text-base">
-                    <li className="flex gap-3">
-                      <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-secondary" />
-                      <span>{language === "sr" ? "Kada predračun ili račun servisa pokazuje veći trošak od isplaćenog iznosa." : "When the workshop estimate or invoice shows a higher cost than the amount already paid."}</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-secondary" />
-                      <span>{language === "sr" ? "Kada smatrate da nisu priznata sva oštećenja ili je procena osiguranja nepotpuna." : "When you believe not all damage has been recognized or the insurer's assessment is incomplete."}</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-secondary" />
-                      <span>{language === "sr" ? "Kada želite da pre daljeg koraka dobijete preliminarni pravni uvid u dokumentaciju." : "When you want a preliminary legal review of the documents before taking the next step."}</span>
-                    </li>
-                  </ul>
-                </div>
-
                 <div className="rounded-2xl border border-secondary/30 bg-background p-6 shadow-sm md:p-8">
                   <h3 className="font-serif text-2xl font-semibold text-foreground">{copy.noteTitle}</h3>
                   <p className="mt-4 text-base leading-8 text-muted-foreground">{copy.note}</p>

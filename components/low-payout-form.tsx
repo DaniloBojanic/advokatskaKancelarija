@@ -487,7 +487,7 @@ export function LowPayoutForm() {
             </li>
             <li className="flex gap-3">
               <FileText className="mt-1 h-4 w-4 shrink-0 text-secondary" />
-              <span>{language === "sr" ? "Predračun ili račun servisa koji pokazuje realnu cenu popravke." : "A workshop estimate or invoice showing the realistic repair cost."}</span>
+              <span>{language === "sr" ? "Dokaz o izvršenoj isplati, ukoliko ga imate." : "Proof of the payment made, if available."}</span>
             </li>
             <li className="flex gap-3">
               <FileText className="mt-1 h-4 w-4 shrink-0 text-secondary" />
@@ -511,7 +511,6 @@ export function LowPayoutForm() {
             </div>
           </div>
 
-          <p className="mt-6 text-sm text-muted-foreground">{copy.acceptedFormats}</p>
         </aside>
       </div>
     </section>
