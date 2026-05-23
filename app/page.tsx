@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer"
 import { Hero } from "@/components/sections/hero"
 import { About } from "@/components/sections/about"
 import { PracticeAreas } from "@/components/sections/practice-areas"
+import { ConcreteSituations } from "@/components/sections/concrete-situations"
 import { Compensation } from "@/components/sections/compensation"
 import { SportsLaw } from "@/components/sections/sports-law"
 import { News } from "@/components/sections/news"
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <About />
         <PracticeAreas />
+        <ConcreteSituations />
         <Compensation />
         <SportsLaw />
         <News />

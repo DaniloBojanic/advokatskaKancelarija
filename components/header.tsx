@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Menu, X, Phone, Mail, ChevronDown, Car, Gavel, Building2, Trophy, Home, Briefcase } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
@@ -13,12 +13,29 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { compensationSubtopics } from "@/lib/compensation-situations"
 import { useLanguage } from "@/lib/i18n/context"
 import { CONTACT } from "@/lib/contact"
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { language, setLanguage, t } = useLanguage()
+
+  useEffect(() => {
+    if (!mobileMenuOpen) {
+      document.body.style.overflow = ""
+      document.body.style.touchAction = ""
+      return
+    }
+
+    document.body.style.overflow = "hidden"
+    document.body.style.touchAction = "none"
+
+    return () => {
+      document.body.style.overflow = ""
+      document.body.style.touchAction = ""
+    }
+  }, [mobileMenuOpen])
 
   const practiceAreaLinks = [
     { name: t.practiceAreas.areas.compensation.title, href: "/oblast-rada/naknada-stete", icon: Car },
@@ -41,6 +58,9 @@ export function Header() {
     { name: t.nav.news, href: "/#novosti" },
     { name: t.nav.contact, href: "/#kontakt" },
   ]
+
+  const compensationPracticeArea = practiceAreaLinks[0]
+  const otherPracticeAreas = practiceAreaLinks.slice(1)
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/92 backdrop-blur-md border-b border-border/80 shadow-[0_1px_0_rgba(7,20,38,0.05)]">
@@ -124,7 +144,25 @@ export function Header() {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator className="mx-2 my-2" />
-                {practiceAreaLinks.map((item) => (
+                <DropdownMenuItem asChild className="rounded-lg px-3 py-2.5">
+                  <Link href={compensationPracticeArea.href} className="flex items-center gap-2.5">
+                    <compensationPracticeArea.icon className="h-4 w-4 text-secondary" />
+                    <span>{compensationPracticeArea.name}</span>
+                  </Link>
+                </DropdownMenuItem>
+                <div className="mx-3 mb-3 ml-7 border-l border-secondary/35 pl-4">
+                  {compensationSubtopics.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="flex items-start gap-3 rounded-lg px-2 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted/60 hover:text-secondary"
+                    >
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" />
+                      <span>{item.title[language]}</span>
+                    </Link>
+                  ))}
+                </div>
+                {otherPracticeAreas.map((item) => (
                   <DropdownMenuItem key={item.href} asChild className="rounded-lg px-3 py-2.5">
                     <Link href={item.href} className="flex items-center gap-2.5">
                       <item.icon className="h-4 w-4 text-secondary" />
@@ -165,7 +203,8 @@ export function Header() {
 
         {/* Mobile navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-border py-4">
+          <div className="lg:hidden border-t border-border bg-background">
+            <div className="max-h-[calc(100vh-120px)] overflow-y-auto overscroll-contain px-4 py-4">
             <div className="flex flex-col gap-2">
               {primaryNavigation.map((item) => (
                 <Link
@@ -187,7 +226,27 @@ export function Header() {
               >
                 {language === "sr" ? "Pregled oblasti rada" : "Practice Areas Overview"}
               </Link>
-              {practiceAreaLinks.map((item) => (
+              <Link
+                href={compensationPracticeArea.href}
+                className="px-4 py-2 text-sm font-semibold text-foreground hover:bg-muted rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {compensationPracticeArea.name}
+              </Link>
+              <div className="mx-4 border-l border-secondary/30 pl-4">
+                {compensationSubtopics.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="flex items-start gap-3 py-2 text-sm text-muted-foreground transition-colors hover:text-secondary"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" />
+                    <span>{item.title[language]}</span>
+                  </Link>
+                ))}
+              </div>
+              {otherPracticeAreas.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
@@ -198,7 +257,9 @@ export function Header() {
                 </Link>
               ))}
               <div className="my-2 h-px bg-border" />
-              {secondaryNavigation.map((item) => (
+              {secondaryNavigation
+                .filter((item) => item.href !== "/oblast-rada/naknada-stete")
+                .map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
@@ -213,6 +274,7 @@ export function Header() {
                   {t.nav.schedule}
                 </Link>
               </Button>
+            </div>
             </div>
           </div>
         )}

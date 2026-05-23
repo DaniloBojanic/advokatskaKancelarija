@@ -17,6 +17,7 @@ interface PracticeAreaLayoutProps {
   content: { sr: React.ReactNode; en: React.ReactNode }
   icon: React.ReactNode
   faqCategories?: FaqCategoryId[]
+  featuredContent?: React.ReactNode
 }
 
 export function PracticeAreaLayout({
@@ -26,6 +27,7 @@ export function PracticeAreaLayout({
   content,
   icon,
   faqCategories,
+  featuredContent,
 }: PracticeAreaLayoutProps) {
   const { language, t } = useLanguage()
 
@@ -64,6 +66,7 @@ export function PracticeAreaLayout({
         {/* Content Section */}
         <section className="py-16 lg:py-24">
           <div className="container mx-auto px-4">
+            {featuredContent ? <div className="mb-10">{featuredContent}</div> : null}
             <div className="grid lg:grid-cols-3 gap-12">
               {/* Main Content */}
               <div className="lg:col-span-2">

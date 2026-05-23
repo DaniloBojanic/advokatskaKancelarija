@@ -1,6 +1,7 @@
 "use client"
 
 import { Scale } from "lucide-react"
+import { LowPayoutPromo } from "@/components/low-payout-promo"
 import { PracticeAreaLayout } from "@/components/practice-area-layout"
 
 export default function NaknadaStetePage() {
@@ -19,10 +20,11 @@ export default function NaknadaStetePage() {
         en: "We represent individuals and companies in compensation claims for material and non-material damage, in negotiations and before courts.",
       }}
       icon={<Scale className="h-8 w-8" />}
+      featuredContent={<LowPayoutPromo />}
       content={{
         sr: (
           <>
-            <h2>Naknada štete na vozilu nakon saobraćajne nezgode</h2>
+            <h2 id="steta-na-vozilu" className="scroll-mt-32">Naknada štete na vozilu nakon saobraćajne nezgode</h2>
             <p>
               U najvećem broju saobraćajnih nezgoda dolazi do oštećenja automobila ili drugih prevoznih sredstava. Lice koje nije odgovorno za nastanak nezgode ima pravo da pretrpljenu štetu na vozilu naplati od osiguravajućeg društva kod kojeg je odgovorno lice imalo zaključen ugovor o obaveznom osiguranju.
             </p>
@@ -58,7 +60,7 @@ export default function NaknadaStetePage() {
               Ako osiguravajuće društvo odbije odštetni zahtev ili ne postupi u zakonom propisanim rokovima, oštećeni ima pravo da svoja potraživanja ostvari putem sudskog postupka pred nadležnim sudom.
             </p>
 
-            <h2>Naknada štete zbog pretrpljenih povreda</h2>
+            <h2 id="povrede-u-saobracaju" className="scroll-mt-32">Naknada štete zbog pretrpljenih povreda</h2>
             <p>
               Saobraćajne nezgode često imaju za posledicu telesne povrede, lake ili teške, sa privremenim ili trajnim posledicama po zdravlje i kvalitet života. U takvim situacijama zaštita prava povređenih zahteva stručan i sistematičan pravni pristup.
             </p>
@@ -90,9 +92,25 @@ export default function NaknadaStetePage() {
             <p>
               Naruženost podrazumeva trajnu promenu spoljašnjeg izgleda ili funkcije tela, kao što su vidljivi ožiljci, gubitak zuba ili ekstremiteta i trajni poremećaji kretanja.
             </p>
-            <h3>Duševni bolovi zbog smrti bliskog lica</h3>
+            <h3 id="smrt-bliskog-lica" className="scroll-mt-32">Duševni bolovi zbog smrti bliskog lica</h3>
             <p>
               Pravo na ovu naknadu imaju bračni drug, deca i roditelji preminulog, kao i braća i sestre ukoliko je postojala trajnija zajednica života, kao i lica koja je preminuli izdržavao.
+            </p>
+
+            <h2 id="ujed-psa" className="scroll-mt-32">Naknada štete zbog ujeda psa</h2>
+            <p>
+              Ujed psa može dovesti do telesnih povreda, potrebe za hitnom medicinskom pomoći, naknadnog lečenja i drugih posledica po zdravlje. U zavisnosti od okolnosti, može se postaviti pitanje odgovornosti vlasnika psa ili drugog lica koje je bilo dužno da obezbedi kontrolu nad životinjom.
+            </p>
+            <p>
+              Za procenu mogućnosti ostvarivanja naknade posebno su važni medicinska dokumentacija, fotografije povreda, podaci o događaju i identitet lica odgovornog za psa. Svaki slučaj se procenjuje prema konkretnim činjenicama i raspoloživoj dokumentaciji.
+            </p>
+
+            <h2 id="pad-na-javnoj-povrsini" className="scroll-mt-32">Naknada štete zbog pada na javnoj površini</h2>
+            <p>
+              Pad na trotoaru, stepeništu, prilazu ili drugoj javnoj površini može prouzrokovati povrede i dodatne troškove lečenja, oporavka i izostanka sa posla. U takvim situacijama najčešće se proverava da li je površina bila nebezbedna i ko je bio dužan da je održava u ispravnom stanju.
+            </p>
+            <p>
+              Fotografije mesta događaja, podaci o svedocima, medicinska dokumentacija i drugi tragovi događaja imaju poseban značaj za kasniju pravnu procenu. Opravdanost potraživanja zavisi od okolnosti slučaja i mogućnosti dokazivanja odgovornosti.
             </p>
 
             <h2>Ko isplaćuje naknadu?</h2>
@@ -113,7 +131,7 @@ export default function NaknadaStetePage() {
         ),
         en: (
           <>
-            <h2>When do you have the right to compensation?</h2>
+            <h2 id="steta-na-vozilu" className="scroll-mt-32">When do you have the right to compensation?</h2>
             <p>
               You may claim compensation when damage has occurred, a liable party exists, and a causal link can be proven between the harmful event and the consequence. In practice, this includes traffic accidents, workplace injuries, strict liability cases, and breach-of-contract damages.
             </p>
@@ -135,7 +153,7 @@ export default function NaknadaStetePage() {
               <li>mental suffering due to death or severe disability of a close relative</li>
             </ul>
 
-            <h2>How we handle the case</h2>
+            <h2 id="povrede-u-saobracaju" className="scroll-mt-32">How we handle the case</h2>
             <h3>1. Case assessment</h3>
             <p>
               We review documents, medical records, and the facts of the event, then provide a realistic assessment of legal grounds and claim value.
@@ -159,6 +177,21 @@ export default function NaknadaStetePage() {
               <li>photos, witness statements, and other evidence</li>
               <li>correspondence with the insurance company</li>
             </ul>
+
+            <h2 id="smrt-bliskog-lica" className="scroll-mt-32">Compensation due to the death of a close family member</h2>
+            <p>
+              In the most severe cases, compensation may also be considered for mental suffering caused by the death of a close family member. Such cases require careful legal and factual assessment of the family relationship, the event itself and the consequences that followed.
+            </p>
+
+            <h2 id="ujed-psa" className="scroll-mt-32">Compensation for a dog bite</h2>
+            <p>
+              A dog bite can lead to bodily injury, urgent medical treatment and later health consequences. Depending on the circumstances, it may be necessary to examine the liability of the dog owner or another person who was responsible for controlling the animal.
+            </p>
+
+            <h2 id="pad-na-javnoj-povrsini" className="scroll-mt-32">Compensation for a fall on a public surface</h2>
+            <p>
+              A fall on a sidewalk, staircase or another public surface may result in injuries and additional costs. In such situations, it is important to assess whether the surface was unsafe and who was responsible for maintaining it properly.
+            </p>
 
             <h2>Time limits</h2>
             <p>

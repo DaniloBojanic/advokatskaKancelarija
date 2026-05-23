@@ -19,6 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${SITE_URL}/premala-isplata-stete-na-vozilu`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.92,
+    },
+    {
       url: `${SITE_URL}/oblast-rada/naknada-stete`,
       lastModified: now,
       changeFrequency: "monthly",
